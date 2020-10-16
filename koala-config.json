@@ -16,7 +16,7 @@
 	"options": {
 
 		// Output style. Can be nested (default), compact, compressed, or expanded.
-		"outputStyle": "nested",
+		"outputStyle": "expanded",
 
 		// Emit comments in the generated CSS indicating the corresponding source line.
 		"lineComments": false,
@@ -25,7 +25,7 @@
 		"debugInfo": true,
 
 		// Create sourcemap files next to the generated CSS files
-		"sourceMap": true,
+		"sourceMap": false,
 
 		// Use Unix-style newlines in written files.
 		"unixNewlines": false,

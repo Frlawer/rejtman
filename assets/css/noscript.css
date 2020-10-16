@@ -1,6 +1,16 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/libs\/_custom\.scss}line{font-family:\000031}}
 #top {
-  background-color: #ffdbc5; }
+  background-color: #931a25;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/libs\/_custom\.scss}line{font-family:\000036}}
+.headerarea .headertop ul li {
+  display: inline-block;
+  padding: 15px;
+  color: #fff;
+  font-size: 15px;
+  color: #e0e0e0;
+}
 
 /*
 	Helios by HTML5 UP
@@ -10,11 +20,11 @@
 /* Carousel */
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/noscript\.scss}line{font-family:\0000317}}
 .carousel {
-  overflow-x: auto; }
+  overflow-x: auto;
+}
 
 /* Header */
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/noscript\.scss}line{font-family:\0000326}}
 body.homepage.is-preload #header:after {
-  opacity: 0; }
-
-/*# sourceMappingURL=noscript.css.map */
+  opacity: 0;
+}

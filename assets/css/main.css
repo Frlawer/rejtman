@@ -36,6 +36,10 @@
   border: 2px solid #f5efef;
 }
 
+.headertop {
+  text-align: center;
+}
+
 nav {
   color: #f5efef;
 }
@@ -145,6 +149,10 @@ nav {
 .ourservicearea .servicewrap .servicecontent p {
   color: #f5efef;
   margin-bottom: 0;
+}
+
+#footer ul li {
+  list-style: none;
 }
 
 /*

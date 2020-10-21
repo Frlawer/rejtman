@@ -1,0 +1,191 @@
+// top donde estan los datos de la empresa
+#top{
+    background-color: _palette(uno);
+    font-family: _font(sans);
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.headerarea{
+
+    .headertop{
+        border-bottom: 1px solid hsla(0,0%,100%,.07);
+        padding: 0;
+    }
+
+    ul li {
+        display: inline-block;
+        padding: 15px;
+        color: #fff;
+        font-size: 15px;
+        color: #e0e0e0;
+    }
+    i {
+        padding-right: 10px;
+        color: _palette(cuatro)
+    }
+    div{
+        display: flex;
+        align-items: center;
+        
+        ul{
+            margin-bottom: 0;
+        }
+        .button{
+            background: _palette(uno);
+            font-weight: 900;
+            padding: 0.3em 2em 0.3em 2em;
+            border: 2px solid _palette(cuatro)
+        }
+    }
+}
+
+
+
+.headertop{
+    text-align: center;
+}
+
+nav{
+    color: _palette(cuatro);
+    
+}
+
+.image {
+
+    &.lateral{
+
+        & img{
+            width: 500px;
+        }
+    }
+}
+
+.servicearea{
+    background: _palette(cuatro);
+    padding: 50px 0 20px;
+    position: relative;
+    margin-top: -10px;
+
+    .serviceitem{
+        overflow: hidden;
+        margin-bottom: 30px;
+        background: #fff;
+
+        .serviceicon{
+            background : _palette(dos);
+            float      : left;
+            height     : 100px;
+            max-width  : 100px;
+            text-align : center;
+            width      : 95px;
+
+            i{
+                line-height: 1.5;
+                color: _palette(cuatro);
+                font-weight: lighter;;
+            }
+        }
+
+        .servicetext{
+            overflow: hidden;
+            padding: 16px 25px; 
+
+            span{
+                color: _palette(uno)
+            }
+        }
+    }
+}
+
+.ourservicearea{
+    background: _palette(uno);
+    padding: 100px 0 40px;
+
+    .sectiontitle{
+        text-align: center;
+        margin-bottom: 60px;
+
+        span{
+            font-size: 16px;
+            color: _palette(tres);
+            position: relative;
+            display: block;
+            line-height: 15px;
+            margin-bottom: 5px;
+        }
+        h2{
+            font-size: 36px;
+            color: _palette(cuatro);
+            padding-bottom: 20px;
+            position: relative;
+
+            &:before{
+                content: "";
+                position: absolute;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 60px;
+                height: 3px;
+                background: _palette(dos);
+            }
+        }
+    }
+
+    .servicewrap{
+        margin-bottom: 60px;
+        overflow: hidden;
+
+        .serviceicon{
+            float: left;
+            border: 1px solid white ;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+
+            i{
+                color: white;
+                -webkit-transition: all .3s;
+                transition: all .3s;
+
+                &:before{
+                    font-size: 45px;
+                }
+            }
+        }
+
+        .servicecontent{
+            overflow: hidden;
+
+            h3{
+                color: _palette(tres);
+                font-size: 24px;
+                padding-bottom: 10px;
+                position: relative;
+                margin-bottom: 10px;
+            }
+
+            p{
+                color: _palette(cuatro);
+                margin-bottom: 0;
+            }
+
+        }
+    }
+}
+
+
+// FOOTER
+#footer{
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}

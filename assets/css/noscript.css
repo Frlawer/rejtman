@@ -1,15 +1,148 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/libs\/_custom\.scss}line{font-family:\000031}}
 #top {
   background-color: #931a25;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/libs\/_custom\.scss}line{font-family:\000036}}
-.headerarea .headertop ul li {
+.headerarea .headertop {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 0;
+}
+.headerarea ul li {
   display: inline-block;
   padding: 15px;
   color: #fff;
   font-size: 15px;
   color: #e0e0e0;
+}
+.headerarea i {
+  padding-right: 10px;
+  color: #f5efef;
+}
+.headerarea div {
+  display: flex;
+  align-items: center;
+}
+.headerarea div ul {
+  margin-bottom: 0;
+}
+.headerarea div .button {
+  background: #931a25;
+  font-weight: 900;
+  padding: 0.3em 2em 0.3em 2em;
+  border: 2px solid #f5efef;
+}
+
+nav {
+  color: #f5efef;
+}
+
+.image.lateral img {
+  width: 500px;
+}
+
+.servicearea {
+  background: #f5efef;
+  padding: 50px 0 20px;
+  position: relative;
+  margin-top: -10px;
+}
+.servicearea .serviceitem {
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: #fff;
+}
+.servicearea .serviceitem .serviceicon {
+  background: #e97171;
+  float: left;
+  height: 100px;
+  max-width: 100px;
+  text-align: center;
+  width: 95px;
+}
+.servicearea .serviceitem .serviceicon i {
+  line-height: 1.5;
+  color: #f5efef;
+  font-weight: lighter;
+}
+.servicearea .serviceitem .servicetext {
+  overflow: hidden;
+  padding: 16px 25px;
+}
+.servicearea .serviceitem .servicetext span {
+  color: #931a25;
+}
+
+.ourservicearea {
+  background: #931a25;
+  padding: 100px 0 40px;
+}
+.ourservicearea .sectiontitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.ourservicearea .sectiontitle span {
+  font-size: 16px;
+  color: #ffcb8e;
+  position: relative;
+  display: block;
+  line-height: 15px;
+  margin-bottom: 5px;
+}
+.ourservicearea .sectiontitle h2 {
+  font-size: 36px;
+  color: #f5efef;
+  padding-bottom: 20px;
+  position: relative;
+}
+.ourservicearea .sectiontitle h2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  background: #e97171;
+}
+.ourservicearea .servicewrap {
+  margin-bottom: 60px;
+  overflow: hidden;
+}
+.ourservicearea .servicewrap .serviceicon {
+  float: left;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+.ourservicearea .servicewrap .serviceicon i {
+  color: white;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.ourservicearea .servicewrap .serviceicon i:before {
+  font-size: 45px;
+}
+.ourservicearea .servicewrap .servicecontent {
+  overflow: hidden;
+}
+.ourservicearea .servicewrap .servicecontent h3 {
+  color: #ffcb8e;
+  font-size: 24px;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.ourservicearea .servicewrap .servicecontent p {
+  color: #f5efef;
+  margin-bottom: 0;
 }
 
 /*
@@ -18,13 +151,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 /* Carousel */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/noscript\.scss}line{font-family:\0000317}}
 .carousel {
   overflow-x: auto;
 }
 
 /* Header */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/backup\/Clientes\/Rejtman\/www\/assets\/sass\/noscript\.scss}line{font-family:\0000326}}
 body.homepage.is-preload #header:after {
   opacity: 0;
 }

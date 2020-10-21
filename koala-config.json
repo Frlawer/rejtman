@@ -22,7 +22,7 @@
 		"lineComments": false,
 
 		// Emit extra information in the generated CSS that can be used by the FireSass Firebug plugin.
-		"debugInfo": true,
+		"debugInfo": false,
 
 		// Create sourcemap files next to the generated CSS files
 		"sourceMap": false,

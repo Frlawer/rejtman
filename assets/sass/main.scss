@@ -515,6 +515,7 @@
 		input[type="text"],
 		input[type="email"],
 		input[type="password"],
+		input[type="phone"],
 		select,
 		textarea {
 			-webkit-appearance: none;
@@ -1002,12 +1003,12 @@
 		position: relative;
 		overflow: hidden;
 		padding: 6em 0 6em 0;
-		background: #2b252c;
+		background: _palette(uno);
 		color: #fff;
 
 		.icon.circled {
-			background: #fff;
-			color: #2b252c;
+			background: _palette(cuatro);
+			color: _palette(dos);
 		}
 
 		header {

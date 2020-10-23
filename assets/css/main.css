@@ -1706,6 +1706,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="password"],
 form input[type="phone"],
+form input[type="time"],
 form select,
 form textarea {
   -webkit-appearance: none;
@@ -1725,6 +1726,7 @@ form input[type="text"]:focus,
 form input[type="email"]:focus,
 form input[type="password"]:focus,
 form input[type="phone"]:focus,
+form input[type="time"]:focus,
 form select:focus,
 form textarea:focus {
   background: #fff;

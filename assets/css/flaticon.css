@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 23/10/2020 20:46
+  	Creation date: 23/10/2020 22:28
   	*/
 
 @font-face {
@@ -47,3 +47,4 @@ margin-left: 20px;
 .flaticon-mapa:before { content: "\f10e"; }
 .flaticon-marcador-de-posicion:before { content: "\f10f"; }
 .flaticon-asesoramiento:before { content: "\f110"; }
+.flaticon-herido:before { content: "\f111"; }

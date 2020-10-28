@@ -32,14 +32,3 @@ define('BASE_URL','http://estudiomrejtman.com.ar/');
   |
  */
 define("RUTA_VISTAS",getcwd().DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR);
-/*
-  |--------------------------------------------------------------------------
-  | key facebook y twitter
-  |--------------------------------------------------------------------------
-  |
- */
-$configfb = array(
-  'app_id' => '',
-  'app_secret' => '',
-  'scopes' => array('email','read_friendlists','user_online_presence')
-);

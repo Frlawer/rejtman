@@ -23,8 +23,8 @@ abstract class DBconn {
 
     // set from here *************************
     private static $db_host = 'localhost';
-    private static $db_user = 'c1980986_rejtman';
-    private static $db_pass = '69meduZUsa';
+    private static $db_user = 'root';
+    private static $db_pass = '';
     protected $db_name = 'c1980986_rejtman';
     public $mensaje = 'Listo!';
     // to here *******************************

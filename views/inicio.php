@@ -25,7 +25,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
-										<i class="fa flaticon-lawyer"></i>
+										<i class="fi flaticon-asesoramiento fa-4x"></i>
 									</div>
 									<div class="servicetext">
 										<span>Reserve su</span>
@@ -36,7 +36,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
-										<i class="fa flaticon-scale"></i>
+										<i class="fi flaticon-balanza fa-3x"></i>
 									</div>
 									<div class="servicetext">
 										<span>Liberarse</span>
@@ -47,7 +47,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
-										<i class="fa flaticon-network"></i>
+										<i class="fi flaticon-red fa-3x"></i>
 									</div>
 									<div class="servicetext">
 										<span>Trabajamos para</span>
@@ -60,7 +60,7 @@
 				</div>
 
 			<!-- Main -->
-				<div class="nosotros">
+				<div class="nosotros" id="nosotros">
 
 					<div class="wrapper style1">
 						
@@ -86,7 +86,7 @@
 				
 
 			<!-- Area de practica -->
-				<div class="ourservicearea">
+				<div class="ourservicearea" id="areas">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
@@ -98,7 +98,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-parents"></i>
+										<i class="fi flaticon-no-personas-enfermas"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Divorcios Express</h3>
@@ -110,7 +110,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-wounded"></i>
+										<i class="fi flaticon-herido"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Lesión personales</h3>
@@ -121,7 +121,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-employee"></i>
+										<i class="fi flaticon-despedido"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Derecho Laboral</h3>
@@ -132,7 +132,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-thief"></i>
+										<i class="fi flaticon-ladron"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Derecho penal</h3>
@@ -143,7 +143,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-university-graduate-hat"></i>
+										<i class="fi flaticon-pareja"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Reparación histórica.</h3>
@@ -154,7 +154,7 @@
 							<div class="col-4 col-6-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon">
-										<i class="fi flaticon-house"></i>
+										<i class="fi flaticon-accidente-automovilistico"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Recupero de Daños y Perjuicios</h3>
@@ -214,81 +214,4 @@
 					</div>
 				</section>
 
-
-			<!-- contacto -->
-				<div class="contactarea wrapper" id="contactarea">
-					<div class="container">
-						<div class="row">
-							<div class="col-5 col-12-mobile">
-								<div class="contactInfo">
-									<span>Para Nuestros Clientes Honorabes</span>
-									<h2>Consultoría Online</h2>
-									<h6>Llámenos las 24 horas del día, los 7 días de la semana al 0260-4421819 o complete el formulario.</h6>
-									<p>Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de una página al mirar su diseño. El punto de usar Lorem Ipsum es que tiene un inglés más o menos capaz.</p>
-								</div>
-							</div>
-							<div class="col-12-mobile col-7">
-								<form class="contactForm">
-									<div class="row">
-										<div class="col-sm-6 col-12">
-											<div class="formInput">
-												<input placeholder="Tu nombre" name="name" class="form-control" type="text" value="">
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">
-												<input placeholder="Correo electrónico" name="email" class="form-control" type="email" value="">
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">
-												<input placeholder="Teléfono" name="phone" class="form-control" type="phone" value="">
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">
-												<select class="form-control" name="address">
-													<option value="family law">Ley familiar</option>
-													<option value="criminal law">Derecho penal</option>
-													<option value="business law">Derecho empresarial</option>
-													<option value="personal injury">Lesión personal</option>
-													<option value="education law">Ley de educación</option>
-													<option value="drugs crime">Delito de drogas</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">
-												<select class="form-control" name="address">
-													<option value="1"></option>
-													<option value="2">Derecho penal</option>
-													<option value="3">Derecho empresarial</option>
-													<option value="4">Lesión personal</option>
-													<option value="5">Ley de educación</option>
-												</select>
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">	
-												<input placeholder="Fecha" type="text" id="datepicker">
-											</div>
-										</div>
-										<div class="col-6 col-12-mobile">
-											<div class="formInput">	
-											<input type="time" name="hora" value="09:00:00" min="09:00:00" max="12:00:00" step="60">
-											</div>
-										</div>
-										<div class="col-12">
-											<div class="formInput">
-												<textarea class="form-control" placeholder="Descripción del caso..." name="description"></textarea>
-											</div>
-										</div>
-										<div class="col-12">
-											<button type="submit">Consulta</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
+			<?php include('template/cita.php');

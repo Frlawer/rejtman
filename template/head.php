@@ -50,13 +50,13 @@
 								<!-- Nav -->
 								<nav id="nav">
 									<ul>
-										<li><a href="index.html">Inicio</a></li>
-										<li><a href="#">Asesoramiento</a></li>
-										<li><a href="left-sidebar.html">Nosotros</a></li>
-										<li><a href="right-sidebar.html">Áreas</a></li>
-										<li><a href="no-sidebar.html">Testimonios</a></li>
-										<li><a href="no-sidebar.html">Equipo</a></li>
-										<li><a href="no-sidebar.html">Contacto</a></li>
+										<li><a href="index.html" class="scrolly">Inicio</a></li>
+										<li><a href="#contactarea" class="scrolly">Asesoramiento</a></li>
+										<li><a href="#nosotros" class="scrolly">Nosotros</a></li>
+										<li><a href="#areas" class="scrolly">Áreas</a></li>
+										<li><a href="no-sidebar.html" class="scrolly">Testimonios</a></li>
+										<li><a href="#banner" class="scrolly">Equipo</a></li>
+										<li><a href="#footer" class="scrolly">Contacto</a></li>
 									</ul>
 								</nav>
 							</div>

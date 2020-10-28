@@ -116,6 +116,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/area.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 			<script>$(function(){$( "#datepicker" ).datepicker({beforeShowDay: $.datepicker.noWeekends,dateFormat: "dd-mm-yy"});});</script>
 

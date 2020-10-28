@@ -122,7 +122,7 @@ if ( $post ) {
                                     <input placeholder="Tu nombre" name="name" class="form-control" type="text" value="">
                                 </div>
                             </div>
-                            <div class="col-6 col-12-mobile">
+                        <div class="col-6 col-12-mobile">
                                 <div class="formInput">
                                     <input placeholder="Correo electrónico" name="email" class="form-control" type="email" value="">
                                 </div>

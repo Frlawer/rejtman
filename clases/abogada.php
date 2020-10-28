@@ -41,6 +41,11 @@ class Abogada extends DBconn {
     	$this->get_results_from_query();
 	}
 
+	public function horarios($abogada_id){
+		$this->query = "SELECT * FROM horarios INNER JOIN abogada_horarios WHERE abogada_horarios.abogada_re = ".$abogada_id." AND horarios.id_hora = abogada_horarios.hora_re";
+    	$this->get_results_from_query();
+	}
+
 	public function selectId($id){
 		$this->query = "SELECT * FROM abogada WHERE id = '".$id."'";
     	$this->get_results_from_query();

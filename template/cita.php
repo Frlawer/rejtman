@@ -8,29 +8,29 @@ $datos_area = $area->rows;
 	
 require_once('./clases/abogada.php');
 
-$post = (isset($_POST['area']) && !empty($_POST['area'])) &&
-        (isset($_POST['abogada']) && !empty($_POST['abogada'])) &&
-        (isset($_POST['email']) && !empty($_POST['email'])) &&
-        (isset($_POST['name']) && !empty($_POST['name'])) &&
-        (isset($_POST['fecha']) && !empty($_POST['fecha'])) &&
-        (isset($_POST['hora']) && !empty($_POST['hora'])) &&
-        (isset($_POST['description']) && !empty($_POST['description'])) &&
-        (isset($_POST['phone']) && !empty($_POST['phone']));
+// $post = (isset($_POST['area']) && !empty($_POST['area'])) &&
+//         (isset($_POST['abogada']) && !empty($_POST['abogada'])) &&
+//         (isset($_POST['email']) && !empty($_POST['email'])) &&
+//         (isset($_POST['name']) && !empty($_POST['name'])) &&
+//         (isset($_POST['fecha']) && !empty($_POST['fecha'])) &&
+//         (isset($_POST['hora']) && !empty($_POST['hora'])) &&
+//         (isset($_POST['description']) && !empty($_POST['description'])) &&
+//         (isset($_POST['phone']) && !empty($_POST['phone']));
         
-if ( $post ) {
-    $area = htmlspecialchars($_POST["area"]);
-    $abogada = htmlspecialchars($_POST["abogada"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $name = htmlspecialchars($_POST["name"]);
-    $fecha = htmlspecialchars($_POST["fecha"]);
-    $hora = htmlspecialchars($_POST["hora"]);
-    $description = htmlspecialchars($_POST["description"]);
-    $phone = htmlspecialchars($_POST["phone"]);
+// if ( $post ) {
+//     $area = htmlspecialchars($_POST["area"]);
+//     $abogada = htmlspecialchars($_POST["abogada"]);
+//     $email = htmlspecialchars($_POST["email"]);
+//     $name = htmlspecialchars($_POST["name"]);
+//     $fecha = htmlspecialchars($_POST["fecha"]);
+//     $hora = htmlspecialchars($_POST["hora"]);
+//     $description = htmlspecialchars($_POST["description"]);
+//     $phone = htmlspecialchars($_POST["phone"]);
 
-    $cita = new Abogada;
-}else {
-    header("Location: ./");
-}
+//     $cita = new Abogada;
+// }else {
+//     header("Location: ./");
+// }
 
 // email a mi
 //     require './mail/PHPMailerAutoload.php';
@@ -122,7 +122,7 @@ if ( $post ) {
                                     <input placeholder="Tu nombre" name="name" class="form-control" type="text" value="">
                                 </div>
                             </div>
-                        <div class="col-6 col-12-mobile">
+                            <div class="col-6 col-12-mobile">
                                 <div class="formInput">
                                     <input placeholder="Correo electrónico" name="email" class="form-control" type="email" value="">
                                 </div>

@@ -1,43 +1,43 @@
 <?php
 require_once('conn.php');
 class Abogada extends DBconn {
-	var $id;
-	var $nombre;
+	var $abogdada_id;
+	var $abogada_nombre;
 
-	function __construct($id = 0, $nombre = ''){
-		$this->id = $id;
-		$this->nombre = $nombre;
+	function __construct($abogada_id = 0, $abogada_nombre = ''){
+		$this->id = $abogada_id;
+		$this->abogada_nombre = $abogada_nombre;
 	}
 
     protected function insert() {
         $this->query = "INSERT INTO abogada (
-			nombre
+			abogada_nombre
 			) VALUES(
-			'".$this->nombre."'
+			'".$this->abogada_nombre."'
 			)";
         $this->execute_single_query();
     }
 
     protected function delete() {
-        $this->query = "DELETE FROM abogada WHERE id = '".$this->id."'";
+        $this->query = "DELETE FROM abogada WHERE abogada_id = '".$this->abogada_id."'";
         $this->execute_single_query();
     }
 
     protected function update() {
         $this->query = "UPDATE abogada SET
-			nombre = '".$this->nombre."'
-			WHERE id = ".$this->id."";
+			abogada_nombre = '".$this->abogada_nombre."'
+			WHERE abogada_id = ".$this->abogada_id."";
         $this->execute_single_query();
     }
 
     public function select() {
-        $this->query = "SELECT * FROM abogada ORDER BY id";
+        $this->query = "SELECT * FROM abogada ORDER BY abogada_id";
         $this->get_results_from_query();
         // retorna un array con los resultados $this->rows;
     }
 
 	public function xArea($id_area){
-		$this->query = "SELECT * FROM abogada INNER JOIN abogada_area WHERE abogada_area.area_re = ".$id_area." AND abogada_area.abogado_re = abogada.id";
+		$this->query = "SELECT * FROM abogada INNER JOIN abogada_area WHERE abogada_area.area_re = ".$id_area." AND abogada_area.abogado_re = abogada.abogada_id";
     	$this->get_results_from_query();
 	}
 
@@ -47,7 +47,7 @@ class Abogada extends DBconn {
 	}
 
 	public function selectId($id){
-		$this->query = "SELECT * FROM abogada WHERE id = '".$id."'";
+		$this->query = "SELECT * FROM abogada WHERE abogada_id = '".$id."'";
     	$this->get_results_from_query();
 	}
 }

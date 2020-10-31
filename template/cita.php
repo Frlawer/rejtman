@@ -114,7 +114,7 @@ require_once('./clases/abogada.php');
                             </div>
                             <div class="col-6 col-12-mobile">
                                 <div class="formInput">
-                                    <select id='result_1'><option value="">Selecciona Abogada</option></select>
+                                    <select id='abogada'><option value="">Selecciona Abogada</option></select>
                                 </div>
                             </div>
                             <div class="col-sm-6 col-12">

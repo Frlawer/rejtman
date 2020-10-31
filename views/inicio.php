@@ -65,20 +65,20 @@
 					<div class="wrapper style1">
 						
 						<article class="container special">
+							<header>
+								<h2>Sobre Nosotros</h2>
+							</header>
 							
 							<span class="image left lateral">
 								<img src="images/15.jpeg" alt=""/>
 							</span>
-							<header>
-								<h2>Sobre Nosotros</h2>
-							</header>
+							<h3>Visión</h3>
 							<p>
-								Contrariamente a la creencia popular, Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raíces en una pieza de la literatura latina clásica del 45 a. C., por lo que tiene más de 2000 años. Richard McClintock, profesor de latín en, y repasando las citas de la palabra en la literatura clásica, descubrió la fuente indudable. Lorem Ipsum proviene de las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum.
-								Más Acerca De Nosotros..
-								<footer>
-									<a href="#" class="button">Seguir leyendo</a>
-								</footer>
+								Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.
 							</p>
+							<footer>
+								<a href="index.php?view=nosotros" class="button">Seguir leyendo</a>
+							</footer>
 						</article>
 
 					</div>

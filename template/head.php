@@ -50,7 +50,7 @@
 								<!-- Nav -->
 								<nav id="nav">
 									<ul>
-										<li><a href="index.html" class="scrolly">Inicio</a></li>
+										<li><a href="index.php" class="scrolly">Inicio</a></li>
 										<li><a href="#contactarea" class="scrolly">Asesoramiento</a></li>
 										<li><a href="#nosotros" class="scrolly">Nosotros</a></li>
 										<li><a href="#areas" class="scrolly">Áreas</a></li>

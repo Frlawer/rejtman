@@ -107,7 +107,7 @@ require_once('./clases/abogada.php');
                                         <?php 
                                         foreach ($datos_area as $key => $value) {
                                         ?>    
-                                        <option value="<?php echo $value['id'] ?>"><?php echo $value['valor']; ?></option><?php } ?>
+                                        <option value="<?php echo $value['area_id'] ?>"><?php echo $value['area_nombre']; ?></option><?php } ?>
                                     </select>
                                     
                                 </div>

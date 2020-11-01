@@ -37,12 +37,13 @@ class Abogada extends DBconn {
     }
 
 	public function xArea($id_area){
-		$this->query = "SELECT * FROM abogada INNER JOIN abogada_area WHERE abogada_area.area_re = ".$id_area." AND abogada_area.abogado_re = abogada.abogada_id";
+		
+		$this->query = "SELECT * FROM abogada INNER JOIN abogada_area WHERE abogada_area.area_id = ".$id_area." AND abogada_area.abogada_id = abogada.abogada_id";
     	$this->get_results_from_query();
 	}
 
 	public function horarios($abogada_id){
-		$this->query = "SELECT * FROM horarios INNER JOIN abogada_horarios WHERE abogada_horarios.abogada_re = ".$abogada_id." AND horarios.id_hora = abogada_horarios.hora_re";
+		$this->query = "SELECT * FROM horario INNER JOIN abogada_horario WHERE abogada_horario.abogada_id = ".$abogada_id." AND abogada_horario.horario_id = horario.horario_id";
     	$this->get_results_from_query();
 	}
 
@@ -50,4 +51,8 @@ class Abogada extends DBconn {
 		$this->query = "SELECT * FROM abogada WHERE abogada_id = '".$id."'";
     	$this->get_results_from_query();
 	}
+	// SELECT * FROM horario 
+// INNER JOIN abogada_horario 
+// ON abogada_horario.horario_id = horario.horario_id
+// AND abogada_horario.abogada_id = 3
 }

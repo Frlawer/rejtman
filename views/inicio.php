@@ -170,9 +170,9 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Aquí deberían estar nuestros <strong>Abogados</strong>.</h2>
+						<h2>Conozca nuestras <strong>Abogadas</strong>.</h2>
 						<p>
-							Agregamos una foto con descripción de cada uno .
+							Profesionales Capacitadas.
 						</p>
 					</header>
 				</section>
@@ -184,14 +184,14 @@
 						<article>
 							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 							<header>
-								<h3><a href="#">Nombre 1</a></h3>
+								<h3><a href="#">Marta M. Rejtman</a></h3>
 							</header>
 							<p>Descripción abogada 1 con datos relevantes o experiencia.</p>
 						</article>
 						<article>
 							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
 							<header>
-								<h3><a href="#">Nombre 2</a></h3>
+								<h3><a href="#">Jael Julian</a></h3>
 							</header>
 							<p>Descripción abogada 2 con datos relevantes o experiencia.</p>
 						</article>
@@ -202,14 +202,6 @@
 							</header>
 							<p>Descripción abogada 3 con datos relevantes o experiencia.</p>
 						</article>
-						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Nombre 4</a></h3>
-							</header>
-							<p>Descripción abogada 4 con datos relevantes o experiencia.</p>
-						</article>
-
 
 					</div>
 				</section>

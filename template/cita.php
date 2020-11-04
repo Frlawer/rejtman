@@ -32,7 +32,6 @@ require_once('./clases/abogada.php');
 //     header("Location: ./");
 // }
 
-// email a mi
 //     require './mail/PHPMailerAutoload.php';
 
 //     $mail = new PHPMailer;

@@ -13,7 +13,7 @@
 										</span>
 										<h3>Rejtman y Asoc.</h3>
 									</header>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor harum dolorem veniam tempore perferendis officiis, quam aperiam nesciunt voluptate aspernatur ducimus iste similique, exercitationem quod nulla, sed sapiente quis ipsam!</p>
+									<p>Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.</p>
 								</section>
 
 							<!-- Posts -->

@@ -5,7 +5,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="index.html" id="logo">Martínez Rejtman y Asoc.</a></h1>
+								<h1><a href="index.html" id="logo">Martínez Rejtman & Asoc.</a></h1>
 								<hr />
 								<p>Abogados desde 1974</p>
 							</header>

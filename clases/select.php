@@ -12,6 +12,7 @@ function drop_1($drop_var){
 	foreach ($result->rows as $key => $dat) {
 		echo '<option value="'.$dat['abogada_id'].'">'.$dat['abogada_nombre'].'</option>';
 	}
+	echo '</select>';
 }
 
 if(isset($_GET['func']) && $_GET['func'] == "horas"){
@@ -25,4 +26,5 @@ function horas($abogadaid){
 	foreach ($datos->rows as $key => $dat) {
 		echo '<option value="'.$dat['horario_id'].'">'.$dat['horario_hora'].'</option>';
 	}
+	echo '</select>';
 }

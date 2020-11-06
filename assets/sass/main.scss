@@ -1131,7 +1131,7 @@
 
 		article {
 			display: inline-block;
-			width: 18em;
+			width: 25em;
 			background: #fff;
 			text-align: center;
 			padding: 0 1em 3em 1em;
@@ -1180,7 +1180,7 @@
 				}
 
 				article {
-					width: 18em;
+					width: 25em;
 					margin: 0 1.25em 0 0;
 				}
 			}
@@ -1269,7 +1269,7 @@
 				padding: 1.25em 0 1.25em 0;
 
 				article {
-					width: 18em;
+					width: 25em;
 					margin: 0 1em 0 0;
 				}
 			}
@@ -1629,6 +1629,7 @@
 				> header {
 					text-align: center;
 				}
+
 			}
 
 		/* Footer */
@@ -1636,6 +1637,13 @@
 			#footer {
 				padding-left: 1em;
 				padding-right: 1em;
+
+				section{
+
+					ul{
+						text-align: center;
+					}
+				}
 			}
 
 		/* Carousel */

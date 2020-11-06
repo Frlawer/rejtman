@@ -7,7 +7,7 @@
   | Las vistas son archivos que vas a incluir en cada seccion de tu app.
   | Por ejemplo Home, Quienes Somos, Ayuda, etc. etc...
  */
-$arr = array('inicio','nosotros');
+$arr = array('inicio','nosotros', 'cita');
 /*
   |--------------------------------------------------------------------------
   | Si queres mostrar errores de php en pantalla, ponela en SI sino en NO
@@ -23,7 +23,7 @@ define('MOSTRAR_ERRORES', 'SI');//SI ó NO
   |--------------------------------------------------------------------------
   |
  */
-define('BASE_URL','http://estudiomrejtman.com.ar/');
+define('BASE_URL','http://www.estudiomartinezrejtman-asoc.com.ar/');
 
 /*
   |--------------------------------------------------------------------------

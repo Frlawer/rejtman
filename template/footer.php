@@ -5,36 +5,36 @@
 						<div class="row">
 
 							<!-- Tweets -->
-								<section class="col-3 col-12-mobile">
-									<header>
-										<span class="fa-stack fa-2x">
-											<i class="fas fa-circle fa-stack-2x"></i>
-											<i class="fas fa-balance-scale fa-stack-1x fa-inverse"></i>
-										</span>
-										<h3>Rejtman y Asoc.</h3>
-									</header>
-									<p>Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.</p>
-								</section>
+							<section class="col-3 col-12-mobile">
+								<header>
+									<span class="fa-stack fa-2x">
+										<i class="fas fa-circle fa-stack-2x"></i>
+										<i class="fas fa-balance-scale fa-stack-1x fa-inverse"></i>
+									</span>
+									<h3>Rejtman y Asoc.</h3>
+								</header>
+								<p>Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.</p>
+							</section>
 
-							<!-- Posts -->
-								<section class="col-3 col-12-mobile">
-									<header>
-										<span class="fa-stack fa-2x">
-											<i class="fas fa-circle fa-stack-2x"></i>
-											<i class="fas fa-sitemap fa-stack-1x fa-inverse"></i>
-										</span>
-										<h3>Mapa del sitio</h3>
-									</header>
-									<ul>
-										<li><a href="">Inicio</a></li>
-										<li><a href="">Nosotros</a></li>
-										<li><a href="">Areas de práctica</a></li>
-										<li><a href="">Nuestros Abogados</a></li>
-										<li><a href="">Contacto</a></li>
-									</ul>
-								</section>
+						<!-- Posts -->
+							<section class="col-3 col-12-mobile">
+								<header>
+									<span class="fa-stack fa-2x">
+										<i class="fas fa-circle fa-stack-2x"></i>
+										<i class="fas fa-sitemap fa-stack-1x fa-inverse"></i>
+									</span>
+									<h3>Mapa del sitio</h3>
+								</header>
+								<ul>
+									<li><a href="">Inicio</a></li>
+									<li><a href="">Nosotros</a></li>
+									<li><a href="">Areas de práctica</a></li>
+									<li><a href="">Nuestros Abogados</a></li>
+									<li><a href="">Contacto</a></li>
+								</ul>
+							</section>
 
-							<!-- Photos -->
+						<!-- Photos -->
 							<section class="col-3 col-12-mobile">
 								<header>
 									<span class="fa-stack fa-2x">
@@ -53,7 +53,7 @@
 								</ul>
 							</section>							
 						
-							<!-- Photos -->
+						<!-- Photos -->
 							<section class="col-3 col-12-mobile">
 								<header>
 									<span class="fa-stack fa-2x">
@@ -81,11 +81,9 @@
 										</header>
 										<p>Luchando por y para la justicia</p>
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+											<li><a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Mart%C3%ADnez-Rejtman-104845014737833" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.instagram.com/ejuridico.martinezrejtman/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											<li><a href="https://wa.me/+5492995812837" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 										</ul>
 									</section>

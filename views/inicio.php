@@ -22,7 +22,7 @@
 				<div class="servicearea" id="servicearea">
 					<div class="container">
 						<div class="row">
-							<div class="col-4 col-6-mobile">
+							<div class="col-4 col-12-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
 										<i class="fi flaticon-asesoramiento fa-4x"></i>
@@ -33,7 +33,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-4 col-6-mobile">
+							<div class="col-4 col-12-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
 										<i class="fi flaticon-balanza fa-3x"></i>
@@ -44,7 +44,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-4 col-6-mobile">
+							<div class="col-4 col-12-mobile">
 								<div class="serviceitem">
 									<div class="serviceicon">
 										<i class="fi flaticon-red fa-3x"></i>
@@ -95,9 +95,9 @@
 									<h2>Como podemos ayudarte</h2>
 								</div>
 							</div>
-							<div class="col-4 col-6-mobile">
+							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
-									<div class="serviceicon">
+									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-no-personas-enfermas"></i>
 									</div>
 									<div class="servicecontent">
@@ -107,9 +107,9 @@
 								</div>
 							</div>
 							
-							<div class="col-4 col-6-mobile">
+							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
-									<div class="serviceicon">
+									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-herido"></i>
 									</div>
 									<div class="servicecontent">
@@ -118,9 +118,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-4 col-6-mobile">
+							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
-									<div class="serviceicon">
+									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-despedido"></i>
 									</div>
 									<div class="servicecontent">
@@ -129,36 +129,25 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-4 col-6-mobile">
+							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
-									<div class="serviceicon">
-										<i class="fi flaticon-ladron"></i>
-									</div>
-									<div class="servicecontent">
-										<h3>Derecho penal</h3>
-										<p>Es un hecho establecido desde hace mucho tiempo que un lector se distraerá con el contenido legible de</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-4 col-6-mobile">
-								<div class="servicewrap">
-									<div class="serviceicon">
-										<i class="fi flaticon-pareja"></i>
-									</div>
-									<div class="servicecontent">
-										<h3>Reparación histórica.</h3>
-										<p>Jubilaciones y Pensiones. Retiro por invalidez</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-4 col-6-mobile">
-								<div class="servicewrap">
-									<div class="serviceicon">
+									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-accidente-automovilistico"></i>
 									</div>
 									<div class="servicecontent">
 										<h3>Recupero de Daños y Perjuicios</h3>
 										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-12-mobile">
+								<div class="servicewrap">
+									<div class="serviceicon col-12-mobile">
+										<i class="fi flaticon-pareja"></i>
+									</div>
+									<div class="servicecontent">
+										<h3>Reparación histórica.</h3>
+										<p>Jubilaciones y Pensiones. Retiro por invalidez</p>
 									</div>
 								</div>
 							</div>
@@ -182,21 +171,21 @@
 					<div class="reel">
 
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/img01.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Marta M. Rejtman</a></h3>
 							</header>
 							<p>Descripción abogada 1 con datos relevantes o experiencia.</p>
 						</article>
 						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/img03.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Jael Julian</a></h3>
 							</header>
 							<p>Descripción abogada 2 con datos relevantes o experiencia.</p>
 						</article>
 						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/img02.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Lucía Eschler</a></h3>
 							</header>

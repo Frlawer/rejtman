@@ -12,7 +12,7 @@
         </p>
         <section>
             <span class="image left lateral">
-                <img src="images/15.jpeg" alt=""/>
+                <img src="images/04.jpg" alt=""/>
             </span>
             <p>
                 Ante un escenario cada vez más complejo y cambiante, creemos que el conocimiento especializado en cada área del saber jurídico que integra nuestro estudio, es una de las ventajas para poder priorizar los intereses del cliente.

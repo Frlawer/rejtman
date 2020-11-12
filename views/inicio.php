@@ -70,7 +70,7 @@
 							</header>
 							
 							<span class="image left lateral">
-								<img src="images/15.jpeg" alt=""/>
+								<img src="images/banner01.jpg" alt=""/>
 							</span>
 							<h3>Visión</h3>
 							<p>

@@ -101,7 +101,7 @@ if(isset($_POST['upcita']) == 'Solicitar cita'){
 
                     <span id='wait_1' style='display: none;position: absolute;left: 50%;' class="fa-3x"><i class="fas fa-spinner fa-spin"></i></span>
                     
-                    <form class="contactForm" method="post" name="upasistencia" action="" >
+                    <form class="contactForm" method="post" name="upasistencia" action="" id="g-form" >
                         <div class="row">
                             <div class="col-6 col-12-mobile">
                                 <div class="formInput">
@@ -155,7 +155,7 @@ if(isset($_POST['upcita']) == 'Solicitar cita'){
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="button" type="submit"vvalue='Solicitar cita'  name='upcita'>Consulta</button>
+                                <button class="g-recaptcha button" type="submit" value="Solicitar Cita" name="upcita" data-sitekey="reCAPTCHA_site_key" data-callback='onSubmit' data-action='submit' >Consulta</button>
                             </div>
                         </div>
                     </form>

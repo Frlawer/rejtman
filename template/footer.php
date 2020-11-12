@@ -11,7 +11,7 @@
 										<i class="fas fa-circle fa-stack-2x"></i>
 										<i class="fas fa-balance-scale fa-stack-1x fa-inverse"></i>
 									</span>
-									<h3>Rejtman y Asoc.</h3>
+									<h3>Martínez Rejtman & Asoc.</h3>
 								</header>
 								<p>Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.</p>
 							</section>
@@ -26,11 +26,12 @@
 									<h3>Mapa del sitio</h3>
 								</header>
 								<ul>
-									<li><a href="">Inicio</a></li>
-									<li><a href="">Nosotros</a></li>
-									<li><a href="">Areas de práctica</a></li>
-									<li><a href="">Nuestros Abogados</a></li>
-									<li><a href="">Contacto</a></li>
+									<li><a href="/">Inicio</a></li>
+									<li><a href="./cita">Asesoramiento</a></li>
+									<li><a href="./nosotros">Nosotros</a></li>
+									<li><a href="/#areas">Areas de práctica</a></li>
+									<li><a href="/#banner">Equipo</a></li>
+									<li><a href="/#footer">Contacto</a></li>
 								</ul>
 							</section>
 
@@ -44,12 +45,10 @@
 									<h3>Areas de practica</h3>
 								</header>
 								<ul>
-									<li>Ley Familiar</li>
-									<li>Derecho Penal</li>
-									<li>Lesiones Personales</li>
-									<li>Derecho Empresarial</li>
-									<li>Ley de educación</li>
-									<li>Derecho Inmobiliario</li>
+									<li>DERECHO CIVIL Y COMERCIAL</li>
+									<li>DERECHO DE FAMILIA</li>
+									<li>DERECHO LABORAL</li>
+									<li>DERECHO PREVICIONAL</li>
 								</ul>
 							</section>							
 						
@@ -116,7 +115,9 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/area.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+			<script src="https://www.google.com/recaptcha/api.js"></script>
 			<script>$(function(){$( "#datepicker" ).datepicker({beforeShowDay: $.datepicker.noWeekends,dateFormat: "dd-mm-yy"});});</script>
+			<script>function onSubmit(token) {document.getElementById("g-form").submit();}</script>
 
 	</body>
 </html>

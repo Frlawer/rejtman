@@ -25,6 +25,14 @@ define('MOSTRAR_ERRORES', 'SI');//SI ó NO
  */
 define('BASE_URL','http://www.estudiomartinezrejtman-asoc.com.ar/');
 
+/*
+  |--------------------------------------------------------------------------
+  | Nombre de la Empresa.
+  |--------------------------------------------------------------------------
+  |
+ */
+define('NOMBRE_ESTUDIO','Estudio Jurídico Martínez Rejtman & Asoc.');
+
 
 /*
   |--------------------------------------------------------------------------
@@ -32,7 +40,7 @@ define('BASE_URL','http://www.estudiomartinezrejtman-asoc.com.ar/');
   |--------------------------------------------------------------------------
   |
  */
-define('RECAPTCHA_KEY','6LcPR-IZAAAAACXBHIICa7eTDByjy1thNMK2BxDc);
+define('RECAPTCHA_KEY','6LcPR-IZAAAAACXBHIICa7eTDByjy1thNMK2BxDc');
 
 /*
   |--------------------------------------------------------------------------

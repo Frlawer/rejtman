@@ -90,7 +90,7 @@
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Estudio Jurídico Martínez Rejtman y Asoc. Todos los derechos reservados.</li><li>Design: <a href="http://frlawer.com.ar">Frlawer</a></li>
+											<li>&copy; <?php echo NOMBRE_ESTUDIO ?> Todos los derechos reservados.</li><li>Design: <a href="http://frlawer.com.ar">Frlawer</a></li>
 										</ul>
 									</div>
 

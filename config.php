@@ -25,6 +25,15 @@ define('MOSTRAR_ERRORES', 'SI');//SI ó NO
  */
 define('BASE_URL','http://www.estudiomartinezrejtman-asoc.com.ar/');
 
+
+/*
+  |--------------------------------------------------------------------------
+  | Clave Recaptcha.
+  |--------------------------------------------------------------------------
+  |
+ */
+define('RECAPTCHA_KEY','6LcPR-IZAAAAACXBHIICa7eTDByjy1thNMK2BxDc);
+
 /*
   |--------------------------------------------------------------------------
   | Ruta del servidor de las vistas

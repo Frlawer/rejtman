@@ -1,11 +1,4 @@
 <?php 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require './mail/Exception.php';
-require './mail/PHPMailer.php';
-require './mail/SMTP.php';
-
 
 require_once('./clases/area.php');
 require_once('./clases/cita.php');

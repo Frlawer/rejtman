@@ -27,6 +27,7 @@ curl_setopt_array($ch, $curlConfig);
 $response = curl_exec($ch); 
 curl_close($ch);
 
+<<<<<<< HEAD
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'; 
     $recaptcha_secret = RECAPTCHA_KEY; 
     $recaptcha_response = $_POST['recaptcha_response']; 
@@ -34,6 +35,8 @@ curl_close($ch);
     $recaptcha = json_decode($recaptcha); 
     
     if($recaptcha->score >= 0.7){
+=======
+>>>>>>> admin
 $jsonResponse = json_decode($response);
 if ($jsonResponse->success === true) { 
     // Código para procesar el formulario
@@ -103,6 +106,12 @@ if ($jsonResponse->success === true) {
         echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>';
     }
 } else {
+<<<<<<< HEAD
     // Código para aviso de error 
     echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>'; 
+=======
+   // Código para aviso de error
+   echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>';
+
+>>>>>>> admin
 }

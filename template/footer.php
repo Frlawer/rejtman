@@ -115,9 +115,9 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/area.js"></script>
 			<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-			<script src="https://www.google.com/recaptcha/api.js"></script>
 			<script>$(function(){$( "#datepicker" ).datepicker({beforeShowDay: $.datepicker.noWeekends,dateFormat: "dd-mm-yy"});});</script>
-			<script>function onSubmit(token) {document.getElementById("g-form").submit();}</script>
+			<script src='https://www.google.com/recaptcha/api.js?render=6LcPR-IZAAAAAIzsUW-NnwMA_a5wxF7S0Q7-JDyl'></script>
+			<script>grecaptcha.ready(function() {grecaptcha.execute('6LcPR-IZAAAAAIzsUW-NnwMA_a5wxF7S0Q7-JDyl', {action: 'formulario'}).then(function(token) {var recaptchaResponse = document.getElementById('recaptchaResponse');recaptchaResponse.value = token;});});</script>
 
 	</body>
 </html>

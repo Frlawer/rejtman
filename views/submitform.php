@@ -38,7 +38,7 @@ if ($jsonResponse->success === true) {
             echo '<h2>Revisa los datos completados, debes rellenar todos</h2>';
             
         }else{
-
+            
             // seteo las post
             $area = $_POST['area'];
             $abogada = $_POST['abogada'];
@@ -54,7 +54,6 @@ if ($jsonResponse->success === true) {
             // instancio nueva cita con los datos y la subo a la db
             $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $hora, $desc);
             $cita->insert();
-                
             
             // email para abogada
             $mail = new PHPMailer;
@@ -67,7 +66,9 @@ if ($jsonResponse->success === true) {
             $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$abogada.'</p><p>En la fecha '.$fecha.'</p><p>La hora '.$hora.'</p><p>El area a tratar es '.$area.'</p><p>Datos del cliente: '.$email.', '.$tel.', '.$tel.'</p>';
             $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$fecha.', '.$hora.', '.$desc;
             
-            if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}
+            if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}else{
+
+            }
             
             // email a cliente
             $mail2 = new PHPMailer;
@@ -79,8 +80,8 @@ if ($jsonResponse->success === true) {
             $mail2->isHTML(true);
             $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO.'.';
             $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'.</h1>
-                            <h2>¡Gracias por solicitar una cita con nuestro Staff!</h2>
-                            <p>Los pasos a seguir son los siguientes:</p>
+            <h2>¡Gracias por solicitar una cita con nuestro Staff!</h2>
+            <p>Los pasos a seguir son los siguientes:</p>
                             <p>Recuerda que debes abonar la consulta anticipadamente a través de los siguientes medios de pago.</p>
                             <p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomrejtman.com.ar">contacto@estudiomrejtman.com.ar</a>.</p>
                             <p>© 2020 '.NOMBRE_ESTUDIO.' Todos los derechos reservados</p>';

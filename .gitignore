@@ -3,9 +3,5 @@ assets/webfonts
 images
 clases/conn.php
 config.php
-<<<<<<< HEAD
 rejtman.code-workspace
 uml.uxf
-=======
-admin/config.php
->>>>>>> admin

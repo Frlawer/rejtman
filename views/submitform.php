@@ -20,7 +20,7 @@ $datos_area = $area->rows;
 if (isset($_POST['action']) && ($_POST['action'] == 'process')) {
 
     $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify'; 
-    $recaptcha_secret = '6LcPR-IZAAAAACXBHIICa7eTDByjy1thNMK2BxDc'; 
+    $recaptcha_secret = RECAPTCHA_KEY; 
     $recaptcha_response = $_POST['recaptcha_response']; 
     $recaptcha = file_get_contents($recaptcha_url . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response); 
     $recaptcha = json_decode($recaptcha); 

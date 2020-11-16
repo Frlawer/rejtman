@@ -32,7 +32,7 @@ $datos_area = $area->rows;
 
                     <span id='wait_1' style='display: none;position: absolute;left: 50%;' class="fa-3x"><i class="fas fa-spinner fa-spin"></i></span>
                     
-                    <form class="contactForm" method="post" name="upasistencia" action="/submitform" id="g-form" >
+                    <form class="contactForm" method="post" name="upasistencia" action="./submitform" id="g-form" >
                         <div class="row">
                             <div class="col-6 col-12-mobile">
                                 <div class="formInput">

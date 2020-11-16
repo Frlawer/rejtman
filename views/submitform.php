@@ -79,7 +79,7 @@ if ($jsonResponse->success === true) {
             $mail->Port = 465;
 
             $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
-            $mail->setFrom = ('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
+            $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
             // $mail->addAddress('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail->addAddress('frlawer@gmail.com', 'NOMBRE_ESTUDIO');
             $mail->isHTML(true);

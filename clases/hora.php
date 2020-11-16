@@ -45,7 +45,7 @@ class Horario extends DBconn {
     }
     
     public function selectId($id) {
-        $this->query = "SELECT * FROM horario WHERE horarior_id =  '".$id."'";
+        $this->query = "SELECT * FROM horario WHERE horario_id = '".$id."'";
         $this->get_results_from_query();
     }
 	

@@ -35,4 +35,9 @@ class Area extends DBconn {
         $this->get_results_from_query();
         // retorna un array con los resultados $this->rows;
     }
+
+    public function selectId($id){
+		$this->query = "SELECT * FROM area WHERE area_id = '".$id."'";
+    	$this->get_results_from_query();
+	}
 }

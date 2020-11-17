@@ -70,26 +70,26 @@ if ($jsonResponse->success === true) {
             
             // Cargo la Cita a BD
 
-            $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $hora, $desc);
+            $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $horario, $desc);
             $cita->insert();
 
             // consulto datos para envíar email a abogada
 
             $data_area = new Area();
             $data_area->selectId($area);
-            $datos_area = $data_area->rows;
+            $datos_area = $data_area->rows[0];
 
             $data_abogada = new Abogada();
             $data_abogada->selectId($abogada);
-            $datos_abogada = $data_abogada->rows;
+            $datos_abogada = $data_abogada->rows[0];
 
             $data_hora = new Horario();
             $data_hora->selectId($horario);
-            $datos_hora = $data_hora->rows;
+            $datos_hora = $data_hora->rows[0];
 
             $data_cuenta = new Cuenta();
             $data_cuenta->selectAbogadaId($abogada);
-            $datos_cuenta = $data_cuenta->rows;
+            $datos_cuenta = $data_cuenta->rows[0];
 
             // email para abogada
 
@@ -106,11 +106,11 @@ if ($jsonResponse->success === true) {
 
             $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
-            $mail->addAddress($data_abogada->email_abogada , NOMBRE_ESTUDIO);
+            $mail->addAddress($datos_abogada['abogada_email'] , NOMBRE_ESTUDIO);
             $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail->isHTML(true);
             $mail->Subject = 'Nueva cita programada.';
-            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_POST['fecha'].'</p><p>La hora '.$horario.'</p><p>El area a tratar es '.$datos_area->area_nombre.'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
+            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_POST['fecha'].'</p><p>La hora '.$datos_hora['horario_hora'].'</p><p>El area a tratar es '.$datos_area['area_nombre'].'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
             $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$_POST['fecha'].', '.$horario.', '.$desc;
             
             if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}
@@ -138,6 +138,11 @@ if ($jsonResponse->success === true) {
             <h2>¡Gracias por solicitar una cita con nuestro Staff!</h2>
             <p>Los pasos a seguir son los siguientes:</p>
             <p>Recuerda que debes abonar la consulta anticipadamente a través de los siguientes medios de pago.</p>
+            <p>';
+            foreach ($datos_cuenta as $key => $value) {
+                $mail2->Body .= '<span>'.$key.': '.$value.'</span>';
+            }
+            $mail2->Body .= '</p>
             <p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomartinezrejtman-asoc.com.ar">contacto@estudiomartinezrejtman-asoc.com.ar</a>.</p>
             <p>© 2020 '.NOMBRE_ESTUDIO.' Todos los derechos reservados</p>';
             

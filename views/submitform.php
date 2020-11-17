@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './mail/Exception.php';
 require './mail/PHPMailer.php';
 require './mail/SMTP.php';
+require './mail/Exception.php';
 
 
 /**
@@ -73,6 +73,8 @@ if ($jsonResponse->success === true) {
             $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $hora, $desc);
             $cita->insert();
 
+            // consulto datos para envíar email a abogada
+
             $data_area = new Area();
             $data_area->selectId($area);
             $datos_area = $data_area->rows;
@@ -89,10 +91,6 @@ if ($jsonResponse->success === true) {
             $data_cuenta->selectAbogadaId($abogada);
             $datos_cuenta = $data_cuenta->rows;
 
-            // consulto datos para envíar email a abogada
-            $emailAbogada = $abogada->rows[0]['email_abogada'];
-            $links = $abogada->rows[0]['links_']
-
             // email para abogada
 
             $mail = new PHPMailer;
@@ -108,12 +106,12 @@ if ($jsonResponse->success === true) {
 
             $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
-            $mail->addAddress($abogada->rows[0]['email_abogada'], NOMBRE_ESTUDIO);
+            $mail->addAddress($data_abogada->email_abogada , NOMBRE_ESTUDIO);
             $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail->isHTML(true);
             $mail->Subject = 'Nueva cita programada.';
-            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$abogada->rows[0]['abogada_nombre'].'</p><p>En la fecha '.$date.'</p><p>La hora '.$hora.'</p><p>El area a tratar es '.$area.'</p><p>Datos del cliente: '.$email.', '.$tel.', '.$tel.'</p>';
-            $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$fecha.', '.$hora.', '.$desc;
+            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_POST['fecha'].'</p><p>La hora '.$horario.'</p><p>El area a tratar es '.$datos_area->area_nombre.'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
+            $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$_POST['fecha'].', '.$horario.', '.$desc;
             
             if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}
             

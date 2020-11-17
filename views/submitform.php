@@ -95,17 +95,17 @@ if ($jsonResponse->success === true) {
 
             $mail = new PHPMailer;
 
-            $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
-            $mail->isSMTP(); 
-            $mail->Host = 'c1980986.ferozo.com'; 
-            $mail->SMTPAuth = true;  
-            $mail->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
-            $mail->Password = 'Rejtman2020'; 
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-            $mail->Port = 465;
+            // $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
+            // $mail->isSMTP(); 
+            // $mail->Host = 'c1980986.ferozo.com'; 
+            // $mail->SMTPAuth = true;  
+            // $mail->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
+            // $mail->Password = 'Rejtman2020'; 
+            // $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+            // $mail->Port = 465;
 
             $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
-            $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
+            $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail->addAddress($datos_abogada['abogada_email'] , NOMBRE_ESTUDIO);
             $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail->isHTML(true);
@@ -118,29 +118,33 @@ if ($jsonResponse->success === true) {
             // email a cliente
             $mail2 = new PHPMailer;
 
-            $mail2->SMTPDebug = SMTP::DEBUG_SERVER; 
-            $mail2->isSMTP(); 
-            $mail2->Host = 'c1980986.ferozo.com'; 
-            $mail2->SMTPAuth = true;  
-            $mail2->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
-            $mail2->Password = 'Rejtman2020'; 
-            $mail2->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-            $mail2->Port = 465;
-            $mail2->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
+            // $mail2->SMTPDebug = SMTP::DEBUG_SERVER; 
+            // $mail2->isSMTP(); 
+            // $mail2->Host = 'c1980986.ferozo.com'; 
+            // $mail2->SMTPAuth = true;  
+            // $mail2->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
+            // $mail2->Password = 'Rejtman2020'; 
+            // $mail2->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+            // $mail2->Port = 465;
+            // $mail2->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             
             $mail2->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail2->addAddress($email);
             // $mail2->addReplyTo('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail2->addReplyTo('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail2->isHTML(true);
-            $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO.'.';
-            $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'.</h1>
+            $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO;
+            $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1>
             <h2>¡Gracias por solicitar una cita con nuestro Staff!</h2>
             <p>Los pasos a seguir son los siguientes:</p>
             <p>Recuerda que debes abonar la consulta anticipadamente a través de los siguientes medios de pago.</p>
             <p>';
             foreach ($datos_cuenta as $key => $value) {
-                $mail2->Body .= '<span>'.$key.': '.$value.'</span>';
+                $mail2->Body .= '<h3>'.$value.'</h3>';
+                foreach ($value as $key2 => $value2) {
+                    $mail2->Body .= '<p>'.$value2.'</p>';
+
+                }
             }
             $mail2->Body .= '</p>
             <p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomartinezrejtman-asoc.com.ar">contacto@estudiomartinezrejtman-asoc.com.ar</a>.</p>

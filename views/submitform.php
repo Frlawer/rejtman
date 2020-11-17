@@ -8,22 +8,17 @@ require './mail/PHPMailer.php';
 require './mail/SMTP.php';
 
 
-require_once('./clases/area.php');
-require_once('./clases/cita.php');
-require_once('./clases/abogada.php');
-require_once('./clases/hora.php');
-
-$area = new Area();
-$area->selectId($_POST['area']);
-$datos_area = $area->rows;
-
-$abogada = new Abogada();
-$abogada->selectId($_POST['abogada']);
-$datos_abogada = $abogada->rows;
-
-$hora = new Horario();
-$hora->selectId($_POST['hora']);
-$datos_hora = $hora->rows;
+/**
+ * submit envio de email
+ * $_POST['area'];
+ * $_POST['abogada'];
+ * $_POST['nombre'];
+ * $_POST['email'];
+ * $_POST['tel'];
+ * $_POST['fecha'];
+ * $_POST['hora'];
+ * $_POST['desc'];
+ */
 
 // Recaptchaa!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 $recaptcha_secret = RECAPTCHA_KEY; 
@@ -48,8 +43,20 @@ if ($jsonResponse->success === true) {
             echo '<h2>Revisa los datos completados, debes rellenar todos</h2>';
             
         }else{
+            require_once('./clases/area.php');
+            require_once('./clases/cita.php');
+            require_once('./clases/abogada.php');
+            require_once('./clases/hora.php');
+            require_once('./clases/cliente.php');
+            require_once('./clases/cuenta.php');
             
+            // Cargo cliente BD
+
+            $cliente = new Cliente(null, $_POST['nombre'], $_POST['tel'], '', $_POST['email'], '');
+            $cliente->insert();
+
             // seteo las post
+
             $area = $_POST['area'];
             $abogada = $_POST['abogada'];
             $nombre = htmlentities($_POST['nombre'], ENT_QUOTES, "UTF-8");
@@ -58,13 +65,34 @@ if ($jsonResponse->success === true) {
             $date = date_create($_POST['fecha']);
             $fecha_db = date_format($date, 'Y-m-d');
             $fecha = date_format($date, 'm-d-Y');
-            $hora = $_POST['hora'];
+            $horario = $_POST['hora'];
             $desc = htmlentities($_POST['desc'], ENT_QUOTES, "UTF-8");
             
-            // instancio nueva cita con los datos y la subo a la db
+            // Cargo la Cita a BD
+
             $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $hora, $desc);
             $cita->insert();
-            
+
+            $data_area = new Area();
+            $data_area->selectId($area);
+            $datos_area = $data_area->rows;
+
+            $data_abogada = new Abogada();
+            $data_abogada->selectId($abogada);
+            $datos_abogada = $data_abogada->rows;
+
+            $data_hora = new Horario();
+            $data_hora->selectId($horario);
+            $datos_hora = $data_hora->rows;
+
+            $data_cuenta = new Cuenta();
+            $data_cuenta->selectAbogadaId($abogada);
+            $datos_cuenta = $data_cuenta->rows;
+
+            // consulto datos para envíar email a abogada
+            $emailAbogada = $abogada->rows[0]['email_abogada'];
+            $links = $abogada->rows[0]['links_']
+
             // email para abogada
 
             $mail = new PHPMailer;
@@ -80,11 +108,11 @@ if ($jsonResponse->success === true) {
 
             $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', 'NOMBRE_ESTUDIO');
-            // $mail->addAddress('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
-            $mail->addAddress('frlawer@gmail.com', 'NOMBRE_ESTUDIO');
+            $mail->addAddress($abogada->rows[0]['email_abogada'], NOMBRE_ESTUDIO);
+            $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail->isHTML(true);
             $mail->Subject = 'Nueva cita programada.';
-            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$abogada.'</p><p>En la fecha '.$fecha.'</p><p>La hora '.$hora.'</p><p>El area a tratar es '.$area.'</p><p>Datos del cliente: '.$email.', '.$tel.', '.$tel.'</p>';
+            $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$abogada->rows[0]['abogada_nombre'].'</p><p>En la fecha '.$date.'</p><p>La hora '.$hora.'</p><p>El area a tratar es '.$area.'</p><p>Datos del cliente: '.$email.', '.$tel.', '.$tel.'</p>';
             $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$fecha.', '.$hora.', '.$desc;
             
             if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}

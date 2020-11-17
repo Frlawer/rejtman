@@ -44,5 +44,10 @@ class Cuenta extends DBconn {
         $this->query = "SELECT * FROM cuenta ORDER BY cuenta_id";
         $this->get_results_from_query();
         // retorna un array con los resultados $this->rows;
-    }
+	}
+	
+	public function selectAbogadaId($id){
+		$this->query = "SELECT * FROM cuenta WHERE abogada_id = '".$id."'";
+    	$this->get_results_from_query();
+	}
 }

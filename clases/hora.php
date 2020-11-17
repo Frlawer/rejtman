@@ -2,24 +2,24 @@
 require_once('conn.php');
 class Horario extends DBconn {
 	var $horario_id;
-	var	$horarior_hora;
+	var	$horario_hora;
 
 	function __construct(
 		$horario_id = 0,
-        $horarior_hora = 0
+        $horario_hora = 0
         )
 	{
 		$this->horario_id = $horario_id;
-		$this->horarior_hora = $horarior_hora;
+		$this->horario_hora = $horario_hora;
 	}
 
 
     function insert() {
         $this->query = "INSERT INTO cita (
-			horarior_hora,
+			horario_hora,
 			abogada_id,
 			) VALUES(
-			'".$this->horarior_hora."',
+			'".$this->horario_hora."',
 			'".$this->abogada_id."'
 			)";
         $this->execute_single_query();
@@ -32,7 +32,7 @@ class Horario extends DBconn {
 
     protected function update() {
         $this->query = "UPDATE horario SET
-			horarior_hora = '".$this->horarior_hora."',
+			horario_hora = '".$this->horario_hora."',
 			abogada_id = '".$this->abogada_id."'
 			WHERE horario_id = ".$this->horario_id."";
         $this->execute_single_query();

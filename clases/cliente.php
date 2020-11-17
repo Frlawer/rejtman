@@ -1,6 +1,6 @@
 <?php
 require_once('conn.php');
-class Cita extends DBconn {
+class Cliente extends DBconn {
 	var $cliente_id;
 	var	$cliente_nombre;
 	var	$cliente_tel;
@@ -10,8 +10,8 @@ class Cita extends DBconn {
 
 	function __construct(
 		$cliente_id = 0,
-		$cliente_nombre = 0,
-		$cliente_tel = 0,
+		$cliente_nombre = '',
+		$cliente_tel = '',
 		$cliente_dir = '',
 		$cliente_email = '',
 		$cliente_desc = ''
@@ -27,7 +27,7 @@ class Cita extends DBconn {
 
 
     function insert() {
-        $this->query = "INSERT INTO cita (
+        $this->query = "INSERT INTO cliente (
 			cliente_nombre,
 			cliente_tel,
 			cliente_dir,
@@ -49,7 +49,7 @@ class Cita extends DBconn {
     }
 
     protected function update() {
-        $this->query = "UPDATE cita SET
+        $this->query = "UPDATE cliente SET
 			cliente_nombre = '".$this->cliente_nombre."',
 			cliente_tel = '".$this->cliente_tel."',
 			cliente_dir = '".$this->cliente_dir."',

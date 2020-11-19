@@ -95,9 +95,11 @@ if ($jsonResponse->success === true) {
             $mail = new PHPMailer;
 
             $mail->isSMTP(); 
-            $mail->Host = 'localhost'; 
-            $mail->Port = 25;
-
+            $mail2->Host = 'mail.estudiomartinezrejtman-asoc.com.ar'; 
+            $mail2->Port = 465;
+            $mail->SMTPAuth = true;
+            $mail->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar';
+            $mail->Password = 'Rejtman2020';
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $addresses = [
                 '1' => 'luciaeschler@estudiomartinezrejtman-asoc.com.ar',
@@ -116,18 +118,26 @@ if ($jsonResponse->success === true) {
             $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_POST['fecha'].'</p><p>La hora '.$datos_hora['horario_hora'].'</p><p>El area a tratar es '.$datos_area['area_nombre'].'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
             
             if(!$mail->send()){
-                $msj1 = 'lo siento algo fue mal, intenta nuevamente, email abogada';
+                echo 'Error: '.$mail->ErrorInfo;
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email a abogada falló</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
             }else{
-                 $msj1 = 'msj enviado gracias, abogada'; 
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>'; 
                 //  'Error: '.$mail->ErrorInfo;}
             }
-
+            
             // email a cliente
             $mail2 = new PHPMailer;
-    
+            
             $mail2->isSMTP(); 
-            $mail2->Host = 'localhost'; 
-            $mail2->Port = 25;
+            $mail2->Host = 'mail.estudiomartinezrejtman-asoc.com.ar'; 
+            $mail2->Port = 465;
+            $mail2->SMTPAuth = true;
+            $mail2->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar';
+            $mail2->Password = 'Rejtman2020';
             $mail2->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail2->addAddress($email);
             $mail2->isHTML(true);
@@ -144,19 +154,27 @@ if ($jsonResponse->success === true) {
             $mail2->Body .= '</p>
             <p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomartinezrejtman-asoc.com.ar">contacto@estudiomartinezrejtman-asoc.com.ar</a>.</p>
             <p>© 2020 '.NOMBRE_ESTUDIO.' Todos los derechos reservados</p>';
-
+            
             if(!$mail2->send()){
-                $msj2 = 'lo siento algo fue mal, intenta nuevamente, email cliente';
+                echo 'Error: '.$mail->ErrorInfo;
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj cliente error</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
             }else{
-                 $msj2 = 'msj enviado gracias cliente'; 
-                //  'Error: '.$mail->ErrorInfo;}
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
             }
-
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h2><div class="button text-right ">
+            <a href="/" class="scrolly">Volver a inicio</a>
+            </div></div></div></div></div>';
 
         }else{
-            $msj = 'email invalido';
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email invalido</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
         } 
-        if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
-            header('Location : estudiomartinezrejtman-asoc.com.ar/cita');
-        } 
+        // if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
+        //     header('Location : estudiomartinezrejtman-asoc.com.ar/cita');
+        // } 
 }

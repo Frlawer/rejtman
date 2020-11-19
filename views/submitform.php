@@ -3,9 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-$msj = '';
-$msj1 = '';
-$msj2 = '';
+// $msj = '';
+// $msj1 = '';
+// $msj2 = '';
 /**
  * submit envio de email
  * $_POST['area'];
@@ -94,12 +94,6 @@ if ($jsonResponse->success === true) {
 
             $mail = new PHPMailer;
 
-            $mail->isSMTP(); 
-            $mail2->Host = 'mail.estudiomartinezrejtman-asoc.com.ar'; 
-            $mail2->Port = 465;
-            $mail->SMTPAuth = true;
-            $mail->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar';
-            $mail->Password = 'Rejtman2020';
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $addresses = [
                 '1' => 'luciaeschler@estudiomartinezrejtman-asoc.com.ar',
@@ -132,12 +126,6 @@ if ($jsonResponse->success === true) {
             // email a cliente
             $mail2 = new PHPMailer;
             
-            $mail2->isSMTP(); 
-            $mail2->Host = 'mail.estudiomartinezrejtman-asoc.com.ar'; 
-            $mail2->Port = 465;
-            $mail2->SMTPAuth = true;
-            $mail2->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar';
-            $mail2->Password = 'Rejtman2020';
             $mail2->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail2->addAddress($email);
             $mail2->isHTML(true);

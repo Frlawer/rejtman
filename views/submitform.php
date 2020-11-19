@@ -3,11 +3,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './mail/PHPMailer.php';
-require './mail/SMTP.php';
-require './mail/Exception.php';
-
-
+// $msj = '';
+// $msj1 = '';
+// $msj2 = '';
 /**
  * submit envio de email
  * $_POST['area'];
@@ -35,14 +33,15 @@ curl_close($ch);
 $jsonResponse = json_decode($response);
 if ($jsonResponse->success === true) { 
     // Código para procesar el formulario
-    
-    if(isset($_POST['upcita']) == 'Solicitar cita'){
-        
-        if ($_POST['abogada'] == '' && $_POST['hora'] == '') {
-            
-            echo '<h2>Revisa los datos completados, debes rellenar todos</h2>';
-            
-        }else{
+
+    if (array_key_exists('email', $_POST)) {
+        date_default_timezone_set('Etc/UTC');
+
+        // require './vendor/autoload.php';
+        require 'mail/Exception.php';
+        require 'mail/PHPMailer.php';
+        require 'mail/SMTP.php';
+
             require_once('./clases/area.php');
             require_once('./clases/cita.php');
             require_once('./clases/abogada.php');
@@ -95,41 +94,40 @@ if ($jsonResponse->success === true) {
 
             $mail = new PHPMailer;
 
-            $mail->SMTPDebug = SMTP::DEBUG_OFF; 
-            $mail->isSMTP(); 
-            $mail->Host = 'c1980986.ferozo.com'; 
-            $mail->SMTPAuth = true;  
-            $mail->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
-            $mail->Password = 'Rejtman2020'; 
-            $mail->Port = 465;
-
-            $mail->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             $mail->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
-            $mail->addAddress($datos_abogada['abogada_email'] , NOMBRE_ESTUDIO);
+            $addresses = [
+                '1' => 'luciaeschler@estudiomartinezrejtman-asoc.com.ar',
+                '2' => 'jaeljulian@estudiomartinezrejtman-asoc.com.ar',
+                '3' => 'martamrejtman@estudiomartinezrejtman-asoc.com.ar',
+            ];
+            if (array_key_exists('abogada', $_POST) && array_key_exists($_POST['abogada'], $addresses)) {
+                $mail->addAddress($datos_abogada['abogada_email']);
+            } else {
+                $mail->addAddress('contacto@estudiomartinezrejtman-asoc.com.ar');
+            }
+            // $mail->addAddress($datos_abogada['abogada_email'] , NOMBRE_ESTUDIO);
             $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
-            $mail->isHTML(true);
             $mail->Subject = 'Nueva cita programada.';
+            $mail->isHTML(true);
             $mail->Body = '<p>El cliente '.$nombre.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_POST['fecha'].'</p><p>La hora '.$datos_hora['horario_hora'].'</p><p>El area a tratar es '.$datos_area['area_nombre'].'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
-            $mail->AltBody = 'Nueva cita de '.$nombre.', '.$email.', '.$tel.', '.$_POST['fecha'].', '.$horario.', '.$desc;
             
-            if(!$mail->send()){echo 'Error: '.$mail->ErrorInfo;}
+            if(!$mail->send()){
+                echo 'Error: '.$mail->ErrorInfo;
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email a abogada falló</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
+            }else{
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>'; 
+                //  'Error: '.$mail->ErrorInfo;}
+            }
             
             // email a cliente
             $mail2 = new PHPMailer;
-
-            $mail2->SMTPDebug = SMTP::DEBUG_OFF; 
-            $mail2->isSMTP(); 
-            $mail2->Host = 'c1980986.ferozo.com'; 
-            $mail2->SMTPAuth = true;  
-            $mail2->Username = 'contacto@estudiomartinezrejtman-asoc.com.ar'; 
-            $mail2->Password = 'Rejtman2020'; 
-            $mail2->Port = 465;
-            $mail2->setLanguage('es', '\mail\language\phpmailer.lang-es.php');
             
             $mail2->setFrom('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
             $mail2->addAddress($email);
-            // $mail2->addReplyTo('contacto@estudiomartinezrejtman-asoc.com.ar', NOMBRE_ESTUDIO);
-            $mail2->addReplyTo('frlawer@gmail.com', NOMBRE_ESTUDIO);
             $mail2->isHTML(true);
             $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO;
             $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1>
@@ -145,19 +143,26 @@ if ($jsonResponse->success === true) {
             <p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomartinezrejtman-asoc.com.ar">contacto@estudiomartinezrejtman-asoc.com.ar</a>.</p>
             <p>© 2020 '.NOMBRE_ESTUDIO.' Todos los derechos reservados</p>';
             
-            if(!$mail2->send()){echo 'Error: '.$mail2->ErrorInfo;}else{
-                
-                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h2><div class="button text-right ">
+            if(!$mail2->send()){
+                echo 'Error: '.$mail->ErrorInfo;
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj cliente error</a></h2><div class="button text-right ">
                 <a href="/" class="scrolly">Volver a inicio</a>
                 </div></div></div></div></div>';
-                
+            }else{
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
             }
-        }
-    }else{ echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>'; }
-} else {
-    // Código para aviso de error 
-    echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>'; 
-    // Código para aviso de error
-    echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>';
-    
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h2><div class="button text-right ">
+            <a href="/" class="scrolly">Volver a inicio</a>
+            </div></div></div></div></div>';
+
+        }else{
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email invalido</a></h2><div class="button text-right ">
+                <a href="/" class="scrolly">Volver a inicio</a>
+                </div></div></div></div></div>';
+        } 
+        // if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
+        //     header('Location : estudiomartinezrejtman-asoc.com.ar/cita');
+        // } 
 }

@@ -7,7 +7,7 @@ require './mail/PHPMailer.php';
 require './mail/SMTP.php';
 require './mail/Exception.php';
 
-
+$msg = '';
 /**
  * submit envio de email
  * $_POST['area'];
@@ -95,7 +95,6 @@ if ($jsonResponse->success === true) {
 
             $mail = new PHPMailer;
 
-            $mail->SMTPDebug = SMTP::DEBUG_OFF; 
             $mail->isSMTP(); 
             $mail->Host = 'c1980986.ferozo.com'; 
             $mail->SMTPAuth = true;  
@@ -117,7 +116,6 @@ if ($jsonResponse->success === true) {
             // email a cliente
             $mail2 = new PHPMailer;
 
-            $mail2->SMTPDebug = SMTP::DEBUG_OFF; 
             $mail2->isSMTP(); 
             $mail2->Host = 'c1980986.ferozo.com'; 
             $mail2->SMTPAuth = true;  
@@ -161,3 +159,6 @@ if ($jsonResponse->success === true) {
     echo '<div class="msj-nok"><h2>El Formulario no fue completado correctamente</h2></div>';
     
 }
+<?php if (!empty($msg)) {
+    echo "<div class='col-12'>$msg</div>";
+} ?>

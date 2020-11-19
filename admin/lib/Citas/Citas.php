@@ -1,5 +1,5 @@
 <?php
-class Clientes
+class Citas
 {
     /**
      *
@@ -21,12 +21,15 @@ class Clientes
     public function setOrderingValues()
     {
         $ordering = [
-            'cliente_id' => 'ID',
-            'cliente_nombre' => 'Nombre',
-            'cliente_tel' => 'Telefono',
-            'cliente_dir' => 'Dirección',
-            'cliente_email' => 'Email',
-            'cliente_desc' => 'Descripción'
+            'cita_id' => 'ID',
+            'area_id' => 'Area',
+            'abogada_id' => 'Abogada',
+            'cita_nombre' => 'Nombre',
+            'cita_email' => 'Email',
+            'cita_tel' => 'Telefono',
+            'cita_fecha' => 'Fecha',
+            'horario_id' => 'Hora',
+            'cita_desc' => 'Descripción'
         ];
 
         return $ordering;

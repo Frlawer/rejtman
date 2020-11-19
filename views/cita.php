@@ -1,12 +1,4 @@
 <?php 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require './mail/Exception.php';
-require './mail/PHPMailer.php';
-require './mail/SMTP.php';
-
-
 require_once('./clases/area.php');
 require_once('./clases/cita.php');
 require_once('./clases/abogada.php');
@@ -19,6 +11,16 @@ $datos_area = $area->rows;
 <div class="contactarea wrapper" id="contactarea">
         <div class="container">
             <div class="row">
+                <?php
+                if (isset($msj)) {
+                    echo "<div class='col-12'>$msg</div>"; 
+                }elseif(isset($msj1)){
+                    echo "<div class='col-12'>$msg1</div>"; 
+                }elseif(isset($msj2)){
+                    echo "<div class='col-12'>$msg2</div>"; 
+                }
+                                
+                ?>
                 <div class="col-5 col-12-mobile">
                     <div class="contactInfo">
                         <span>Para Nuestros Clientes Honorabes</span>

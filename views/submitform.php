@@ -3,10 +3,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require './mail/PHPMailer.php';
-require './mail/SMTP.php';
-require './mail/Exception.php';
-
 $msg = '';
 /**
  * submit envio de email
@@ -35,14 +31,12 @@ curl_close($ch);
 $jsonResponse = json_decode($response);
 if ($jsonResponse->success === true) { 
     // Código para procesar el formulario
-    
-    if(isset($_POST['upcita']) == 'Solicitar cita'){
-        
-        if ($_POST['abogada'] == '' && $_POST['hora'] == '') {
-            
-            echo '<h2>Revisa los datos completados, debes rellenar todos</h2>';
-            
-        }else{
+
+    if (array_key_exists('email', $_POST)) {
+        date_default_timezone_set('Etc/UTC');
+
+        require '../vendor/autoload.php';
+
             require_once('./clases/area.php');
             require_once('./clases/cita.php');
             require_once('./clases/abogada.php');

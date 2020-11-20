@@ -80,23 +80,25 @@
                                     <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Escritorio</a>
                                 </li>
 
-                                <li <?php echo (CURRENT_PAGE == "customers.php" || CURRENT_PAGE == "add_customer.php") ? 'class="active"' : ''; ?>>
-                                    <a href="#"><i class="fa fa-user-circle fa-fw"></i> Clientes<span class="fa arrow"></span></a>
+                                <li <?php echo (CURRENT_PAGE == "citas.php" || CURRENT_PAGE == "add_citas.php") ? 'class="active"' : ''; ?>>
+                                    <a href="#"><i class="fa fa-calendar"></i> Citas<span class="fa arrow"></span></a>
                                     <ul class="nav nav-second-level">
                                         <li>
-                                            <a href="customers.php"><i class="fa fa-list fa-fw"></i>List all</a>
+                                            <a href="citas.php"><i class="fa fa-list fa-fw"></i>Todos</a>
                                         </li>
                                         <!-- <li>
                                             <a href="add_customer.php"><i class="fa fa-plus fa-fw"></i>Add New</a>
                                         </li> -->
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="citas.php">Citas</a>
+                                <li <?php echo (CURRENT_PAGE == "clientes.php" || CURRENT_PAGE == "add_clientes.php") ? 'class="active"' : ''; ?>>
+                                    <a href="#"><i class="fa fa-user-circle fa-fw"></i> Clientes<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-second-level">
+                                        <li>
+                                            <a href="clientes.php"><i class="fa fa-list fa-fw"></i>Todos</a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <!-- <li>
-                                    <a href="admin_users.php"><i class="fa fa-users fa-fw"></i> Usuarios</a>
-                                </li> -->
                             </ul>
                         </div>
                         <!-- /.sidebar-collapse -->

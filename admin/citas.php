@@ -32,6 +32,7 @@ if (!$order_by) {
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
 $select = array('cita_id', 'area_id', 'abogada_id', 'cita_nombre', 'cita_fecha', 'horario_id');
+// SELECT * FROM horario INNER JOIN abogada_horario WHERE abogada_horario.abogada_id = ".$abogada_id." AND abogada_horario.horario_id = horario.horario_id
 
 //Start building query according to input parameters.
 // If search string

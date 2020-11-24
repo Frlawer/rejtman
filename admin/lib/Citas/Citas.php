@@ -26,7 +26,6 @@ class Citas
             'abogada_id' => 'Abogada',
             'cita_nombre' => 'Nombre',
             'cita_email' => 'Email',
-            'cita_tel' => 'Telefono',
             'cita_fecha' => 'Fecha',
             'horario_id' => 'Hora',
             'cita_desc' => 'Descripción'

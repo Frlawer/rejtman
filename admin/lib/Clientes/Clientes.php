@@ -23,8 +23,6 @@ class Clientes
         $ordering = [
             'cliente_id' => 'ID',
             'cliente_nombre' => 'Nombre',
-            'cliente_tel' => 'Telefono',
-            'cliente_dir' => 'Dirección',
             'cliente_email' => 'Email',
             'cliente_desc' => 'Descripción'
         ];

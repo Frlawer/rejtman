@@ -117,9 +117,9 @@ if ($jsonResponse->success === true) {
                 <a href="/" class="scrolly">Volver a inicio</a>
                 </div></div></div></div></div>';
             }else{
-                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
-                <a href="/" class="scrolly">Volver a inicio</a>
-                </div></div></div></div></div>'; 
+                // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
+                // <a href="/" class="scrolly">Volver a inicio</a>
+                // </div></div></div></div></div>'; 
                 //  'Error: '.$mail->ErrorInfo;}
             }
             
@@ -149,9 +149,9 @@ if ($jsonResponse->success === true) {
                 <a href="/" class="scrolly">Volver a inicio</a>
                 </div></div></div></div></div>';
             }else{
-                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
-                <a href="/" class="scrolly">Volver a inicio</a>
-                </div></div></div></div></div>';
+                // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
+                // <a href="/" class="scrolly">Volver a inicio</a>
+                // </div></div></div></div></div>';
             }
             echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h2><div class="button text-right ">
             <a href="/" class="scrolly">Volver a inicio</a>

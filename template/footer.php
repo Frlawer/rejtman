@@ -62,7 +62,7 @@
 									<h3>Nuestras oficinas</h3>
 								</header>
 								<ul>
-									<li>Cnel Plaza 374, San Rafael, Mendoza</li>
+									<li>Coronel Hilarión Plaza 374, San Rafael, Mendoza</li>
 									<li>Tel.  0260-4421819 </li>
 									<li>contacto@estudiomrejtman.com.ar</li>
 								</ul>

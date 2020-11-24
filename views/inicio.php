@@ -159,7 +159,7 @@
 			<!-- Banner -->
 				<section id="banner">
 					<header>
-						<h2>Conozca nuestras <strong>Abogadas</strong>.</h2>
+						<h2>Conozca nuestro <strong>Staff</strong>.</h2>
 						<p>
 							Profesionales Capacitadas.
 						</p>
@@ -167,29 +167,35 @@
 				</section>
 
 			<!-- Carousel -->
-				<section class="carousel">
+				<section class="carousel" id="staff">
 					<div class="reel">
 
 						<article>
 							<a href="#" class="image featured"><img src="images/img01.jpg" alt="" /></a>
 							<header>
-								<h3><a href="#">Marta M. Rejtman</a></h3>
+								<h3><a href="#">Marta Martínez Rejtman</a></h3>
 							</header>
-							<p>Descripción abogada 1 con datos relevantes o experiencia.</p>
+							<p>Abogada</p>
+							<p>2604 060984</p>
+							<p>martamrejtman@estudiomartinezrejtman-asoc.com.ar</p>
 						</article>
 						<article>
 							<a href="#" class="image featured"><img src="images/img03.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Jael Julian</a></h3>
 							</header>
-							<p>Descripción abogada 2 con datos relevantes o experiencia.</p>
+							<p>Abogada</p>
+							<p>2604 518472</p>
+							<p>jaeljulian@estudiomartinezrejtman-asoc.com.ar</p>
 						</article>
 						<article>
 							<a href="#" class="image featured"><img src="images/img02.jpg" alt="" /></a>
 							<header>
 								<h3><a href="#">Lucía Eschler</a></h3>
 							</header>
-							<p>Descripción abogada 3 con datos relevantes o experiencia.</p>
+							<p>Abogada</p>
+							<p>2604 338377</p>
+							<p>luciaeschler@estudiomartinezrejtman-asoc.com.ar</p>
 						</article>
 
 					</div>

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'bee0f9e642fba68bed8be2d24c7cd576da083bd7',
+    'reference' => '9615fdcd3b8e22869b9e97c1471645a037e0b5e8',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'bee0f9e642fba68bed8be2d24c7cd576da083bd7',
+      'reference' => '9615fdcd3b8e22869b9e97c1471645a037e0b5e8',
     ),
     'doctrine/annotations' => 
     array (
@@ -103,12 +103,12 @@
     ),
     'mercadopago/dx-php' => 
     array (
-      'pretty_version' => '2.1.1',
-      'version' => '2.1.1.0',
+      'pretty_version' => '2.2.1',
+      'version' => '2.2.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b17ca2d555512b6489067e3166bb4beaab206cff',
+      'reference' => '2ea4d51f6b29d568b3a06d430114467fc2ab6b90',
     ),
     'phpmailer/phpmailer' => 
     array (

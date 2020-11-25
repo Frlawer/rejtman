@@ -16,6 +16,14 @@ $arr = array('inicio','nosotros', 'cita', 'submitform','pruebas');
  */
 define('MOSTRAR_ERRORES', 'SI');//SI ó NO
 
+/*
+  |--------------------------------------------------------------------------
+  | Si queres mostrar errores de php en pantalla, ponela en SI sino en NO
+  |--------------------------------------------------------------------------
+  |
+ */
+define('PROD_ACCESS_TOKEN', 'TEST-c9f635c4-9c1b-44f0-81fe-ffcd938db150');//SI ó NO
+
 
 /*
   |--------------------------------------------------------------------------

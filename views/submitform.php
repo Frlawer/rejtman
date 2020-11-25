@@ -115,7 +115,7 @@ if ($jsonResponse->success === true) {
             
             if(!$mail->send()){
                 echo 'Error: '.$mail->ErrorInfo;
-                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email a abogada falló</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Msj cliente error</h3><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
             }else{
                 // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
                 // <a href="/" class="scrolly">Volver a inicio</a>
@@ -140,16 +140,16 @@ if ($jsonResponse->success === true) {
             
             if(!$mail2->send()){
                 echo 'Error: '.$mail->ErrorInfo;
-                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj cliente error</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
+                echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Msj cliente error</h3><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
             }else{
                 // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
                 // <a href="/" class="scrolly">Volver a inicio</a>
                 // </div></div></div></div></div>';
             }
-            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h3><a class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></a></div></div></div></div>';
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</h3><a href="/" class="scrolly button text-right">Volver a inicio</a></div></div></div></div></div>';
 
         }else{
-            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email invalido</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
+            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Email invalido</h3><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
         } 
         // if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
         //     header('Location : estudiomartinezrejtman-asoc.com.ar/cita');

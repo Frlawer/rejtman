@@ -113,8 +113,8 @@
 										<i class="fi flaticon-herido"></i>
 									</div>
 									<div class="servicecontent">
-										<h3>Lesión personales</h3>
-										<p>Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
+										<h3>Recupero de Daños y Perjuicios</h3>
+										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
 									</div>
 								</div>
 							</div>
@@ -126,17 +126,6 @@
 									<div class="servicecontent">
 										<h3>Derecho Laboral</h3>
 										<p>Representación en causas por despidos. Accidentes de Trabajo. Diferencias Salariales. Trabajo en Negro</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-6 col-12-mobile">
-								<div class="servicewrap">
-									<div class="serviceicon col-12-mobile">
-										<i class="fi flaticon-accidente-automovilistico"></i>
-									</div>
-									<div class="servicecontent">
-										<h3>Recupero de Daños y Perjuicios</h3>
-										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos</p>
 									</div>
 								</div>
 							</div>

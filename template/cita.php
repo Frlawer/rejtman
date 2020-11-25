@@ -7,7 +7,7 @@
                         <span>Para Nuestros Clientes Honorabes</span>
                         <h2>Consultoría Online</h2>
                         <h6>Llámenos de Lunes a Viernes de 9 a 19hs al 0260-4421819 o complete el formulario.</h6>
-                        <p>Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos elijen.</p>
+                        <p>Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos eligen.</p>
                         <a href="/cita" class="button">Solicitar Cita</a>
                     </div>
                 </div>

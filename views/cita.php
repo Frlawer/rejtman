@@ -6,6 +6,24 @@ require_once('./clases/abogada.php');
 $area = new Area();
 $area->select();
 $datos_area = $area->rows;
+
+// SDK de Mercado Pago
+require './vendor/autoload.php';
+
+// Agrega credenciales
+MercadoPago\SDK::setAccessToken('PROD_ACCESS_TOKEN');
+
+// / Crea un objeto de preferencia
+$preference = new MercadoPago\Preference();
+
+// Crea un ítem en la preferencia
+$item = new MercadoPago\Item();
+$item->title = 'Consulta Jur&iacute;dica';
+$item->quantity = 1;
+$item->unit_price = 1300;
+$preference->items = array($item);
+$preference->save();
+
 ?>
 <!-- contacto -->
 <div class="contactarea wrapper" id="contactarea">
@@ -26,7 +44,7 @@ $datos_area = $area->rows;
                         <span>Para Nuestros Clientes Honorabes</span>
                         <h2>Consultoría Online</h2>
                         <h6>Llámenos de Lunes a Viernes de 9 a 19hs al 0260-4421819 o complete el formulario.</h6>
-                        <p>Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos elijen.</p>
+                        <p>Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos eligen.</p>
                         <a href="/cita" class="button">Solicitar Cita</a>
                     </div>
                 </div>
@@ -91,6 +109,9 @@ $datos_area = $area->rows;
                             <div class="col-12">
                                 <button class="button" name="upcita" value="Solicitar cita" >Consulta</button>
                             </div>
+
+                            <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
+                            </script>
                         </div>
                     </form>
                 </div>

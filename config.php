@@ -7,7 +7,7 @@
   | Las vistas son archivos que vas a incluir en cada seccion de tu app.
   | Por ejemplo Home, Quienes Somos, Ayuda, etc. etc...
  */
-$arr = array('inicio','nosotros', 'cita', 'submitform','pruebas', 'prueba');
+$arr = array('inicio','nosotros', 'cita', 'submitform','pruebas', 'prueba','pending','success','failure');
 /*
   |--------------------------------------------------------------------------
   | Si queres mostrar errores de php en pantalla, ponela en SI sino en NO
@@ -22,7 +22,7 @@ define('MOSTRAR_ERRORES', 'SI');//SI ó NO
   |--------------------------------------------------------------------------
   |
  */
-define('PROD_ACCESS_TOKEN', 'TEST-c9f635c4-9c1b-44f0-81fe-ffcd938db150');//SI ó NO
+define('PROD_ACCESS_TOKEN', 'TEST-573726d7-18f9-4c7b-82a6-75f4f81edb3d');//SI ó NO
 
 /*
   |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ define('PROD_ACCESS_TOKEN', 'TEST-c9f635c4-9c1b-44f0-81fe-ffcd938db150');//SI ó
   |--------------------------------------------------------------------------
   |
  */
-define('PROD_ACCESS_TOKEN_SECURE', 'TEST-5503571218052849-051322-3c8db6c3b17924ff07ba25f68e80a733-225380343');//SI ó NO
+define('PROD_ACCESS_TOKEN_SECURE', 'TEST-5503571218052849-112616-65aa2d57f976a8ee270c33da123e129c-225380343');//SI ó NO
 
 
 /*

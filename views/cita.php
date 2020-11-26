@@ -6,35 +6,6 @@ require_once('./clases/abogada.php');
 $area = new Area();
 $area->select();
 $datos_area = $area->rows;
-
-// SDK de Mercado Pago
-require './vendor/autoload.php';
-
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken('PROD_ACCESS_TOKEN');
-
-// / Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
-
-// Crea un ítem en la preferencia
-$item = new MercadoPago\Item();
-$item->id = "";
-$item->title = "Asistencia Juridica";
-$item->description = "Cita de atención Jurídica para clientes online";
-$item->category_id = "services";
-$item->quantity = 1;
-$item->currency_id = "ARS";
-$item->unit_price = 1300;
-
-$preference = new MercadoPago\Preference();
-//...
-$preference->back_urls = array(
-    "success" => "https://www.estudiomartinezrejtman-asoc.com.ar/success",
-    "failure" => "http://www.estudiomartinezrejtman-asoc.com.ar/failure",
-    "pending" => "http://www.estudiomartinezrejtman-asoc.com.ar/pending"
-);
-$preference->auto_return = "approved";
-
 ?>
 <!-- contacto -->
 <div class="contactarea wrapper" id="contactarea">

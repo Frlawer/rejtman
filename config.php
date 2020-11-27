@@ -7,7 +7,7 @@
   | Las vistas son archivos que vas a incluir en cada seccion de tu app.
   | Por ejemplo Home, Quienes Somos, Ayuda, etc. etc...
  */
-$arr = array('inicio','nosotros', 'cita', 'submitform','pruebas', 'prueba','pending','success','failure');
+$arr = array('inicio','nosotros', 'cita', 'submitform','pruebas', 'citaprueba','prueba','pending','success','failure');
 /*
   |--------------------------------------------------------------------------
   | Si queres mostrar errores de php en pantalla, ponela en SI sino en NO

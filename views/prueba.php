@@ -8,15 +8,15 @@ require_once('./clases/area.php');
 require_once('./clases/cita.php');
 require_once('./clases/abogada.php');
 
-$area = new Abogada();
-$area->select();
-$datos_area = $area->rows;
+$mp = new Abogada();
+$mp->selectId($_SESSION['abogada']);
+$datos_mp = $mp->rows;
 
 // SDK de Mercado Pago
 require './vendor/autoload.php';
-
+$token_rejtman = $dato_mp['mp_token_secure'];
 // Agrega credenciales
-MercadoPago\SDK::setAccessToken('TEST-7859083094183615-112618-bc6769d4071f027497af557d99d66374-678313240');
+MercadoPago\SDK::setAccessToken($token_rejtman);
 
 // Crea un objeto de preferencia
 $preference = new MercadoPago\Preference();
@@ -31,7 +31,7 @@ $preference->payment_methods = array(
     "excluded_payment_types" => array(
       array("id" => "ticket")
     ),
-    "installments" => 2
+    "installments" => 3
   );
 
 $datos = array();

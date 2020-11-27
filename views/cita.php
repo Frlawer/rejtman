@@ -91,8 +91,6 @@ $datos_area = $area->rows;
                                 <button class="button" name="upcita" value="Solicitar cita" >Consulta</button>
                             </div>
 
-                            <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id="<?php echo $preference->id; ?>">
-                            </script>
                         </div>
                     </form>
                 </div>

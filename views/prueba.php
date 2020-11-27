@@ -42,17 +42,30 @@ $preference->save();
 // TEST-7859083094183615-112618-bc6769d4071f027497af557d99d66374-678313240
 
 // Clientes {"id":678312087,"nickname":"TESTMF3EZEVE","password":"qatest948","site_status":"active","email":"test_user_36139729@testuser.com"}
+
+// Tarjetas
+// Mastercard	5031 7557 3453 0604	123	11/25
+// Visa	4509 9535 6623 3704	123	11/25
+// American Express	3711 803032 57522	1234	11/25
+
+// APRO: Pago aprobado.
+// CONT: Pago pendiente.
+// OTHE: Rechazado por error general.
+// CALL: Rechazado con validación para autorizar.
+// FUND: Rechazado por monto insuficiente.
+// SECU: Rechazado por código de seguridad inválido.
+// EXPI: Rechazado por problema con la fecha de expiración.
+// FORM: Rechazado por error en formulario
+
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-        <a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
-</body>
-</html>
+<div class="contactarea wrapper" id="contactarea">
+	<div class="container">
+		<div class="row">
+			<div class="button col-12">
+				<a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
+			</div>
+		</div>
+	</div>
+</div>

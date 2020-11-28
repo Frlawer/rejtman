@@ -69,7 +69,13 @@
 							</section>
 
 						</div>
-						<hr />
+						<div class="row">
+							<div class="col-12">
+								<section class="mapa">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d332.87507140695004!2d-68.32758877170377!3d-34.62246551820688!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd4e958325029e5e!2sMart%C3%ADnez%20Rejtman%20%26%20Asoc.!5e0!3m2!1ses-419!2sar!4v1606324062681!5m2!1ses-419!2sar" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								</section>
+							</div>
+						</div>
 						<div class="row">
 							<div class="col-12">
 

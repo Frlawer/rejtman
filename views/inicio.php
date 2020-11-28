@@ -113,8 +113,13 @@
 										<i class="fi flaticon-herido"></i>
 									</div>
 									<div class="servicecontent">
+<<<<<<< HEAD
 										<h3>Recupero de Daños y Perjuicios</h3>
 										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
+=======
+										<h3>Lesión personales - Daños y Perjuicios</h3>
+										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contactenos</p>
+>>>>>>> mp
 									</div>
 								</div>
 							</div>

@@ -26,7 +26,7 @@
 										<div class="col-5 col-12-mobile">
 											<ul>
 												<li>
-													<i class="fa fa-map-marker" aria-hidden="true"></i>Cnel Plaza 374, San Rafael, Mendoza</div>
+													<i class="fa fa-map-marker" aria-hidden="true"></i>Coronel Hilarión Plaza 374, San Rafael, Mendoza</div>
 												</li>
 											</ul>
 										<div class="col-5 col-12-mobile">

@@ -88,8 +88,6 @@ $preference->save();
 // FORM: Rechazado por error en formulario
 
 ?>
-
-
 <div class="contactarea wrapper" id="contactarea">
 	<div class="container">
 		<div class="row">

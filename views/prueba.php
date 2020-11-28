@@ -1,5 +1,9 @@
 <?php
 
+if (empty($_POST))  {
+  header('Location: ./');
+}
+
 $_SESSION = $_POST;
 
 var_dump($_SESSION);
@@ -7,8 +11,10 @@ var_dump($_SESSION);
 require_once('./clases/area.php');
 require_once('./clases/cita.php');
 require_once('./clases/abogada.php');
-
+                                    
+                                    
 $mp = new Abogada();
+
 $mp->selectId($_SESSION['abogada']);
 $datos_mp = $mp->rows;
 

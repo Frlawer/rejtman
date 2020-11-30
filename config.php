@@ -1,5 +1,4 @@
 <?php
-
 /*
   |--------------------------------------------------------------------------
   | En este array se ponen todas las vistas permitidas, sin el .php

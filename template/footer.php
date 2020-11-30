@@ -10,7 +10,7 @@
 										<i class="fas fa-circle fa-stack-2x"></i>
 										<i class="fas fa-balance-scale fa-stack-1x fa-inverse"></i>
 									</span>
-									<h3>Martínez Rejtman & Asoc.</h3>
+									<h3>Estudio Jurídico Martínez Rejtman & Asoc.</h3>
 								</header>
 								<p>Nuestro estudio se fundó en el año 1974, siempre buscando la mejor estrategia para cada caso concreto. Generando un vínculo de confianza, seguridad y confidencialidad.</p>
 							</section>

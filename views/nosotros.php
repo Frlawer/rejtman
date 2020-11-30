@@ -32,7 +32,7 @@
                 Damos mucha importancia a los métodos alternativos de resolución de conflictos, como la mediación y la conciliación, en tanto disminuyen los riesgos y acortan los plazos.
             </p>
             <p>
-                Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos elijen.
+                Nuestro estudio, prioriza la utilización de las nuevas tecnologías, en beneficio de nuestros clientes. Así, mediante consultas a través de nuestra página web, WhatsApp y vídeollamadas logramos una eficiente y más rápida atención a quienes nos eligen.
             </p>
             <h2>
                 <em class="centered">Luchamos por y para la justicia.</em> 

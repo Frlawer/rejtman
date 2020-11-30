@@ -165,8 +165,7 @@
 								<h3><a href="#">Marta Martínez Rejtman</a></h3>
 							</header>
 							<p>Abogada</p>
-							<p>2604 674207</p>
-							<p>martamrejtman@estudiomartinezrejtman-asoc.com.ar</p>
+							<i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+5492604674207" target="_blank">2604 674207</a>
 						</article>
 						<article>
 							<a href="#" class="image featured"><img src="images/img03.jpg" alt="" /></a>
@@ -174,8 +173,7 @@
 								<h3><a href="#">Jael Julian</a></h3>
 							</header>
 							<p>Abogada</p>
-							<p>2604 518472</p>
-							<p>jaeljulian@estudiomartinezrejtman-asoc.com.ar</p>
+							<i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+5492604518472" target="_blank">2604 518472</a>
 						</article>
 						<article>
 							<a href="#" class="image featured"><img src="images/img02.jpg" alt="" /></a>
@@ -183,8 +181,7 @@
 								<h3><a href="#">Lucía Eschler</a></h3>
 							</header>
 							<p>Abogada</p>
-							<p>2604 338377</p>
-							<p>luciaeschler@estudiomartinezrejtman-asoc.com.ar</p>
+							<i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=+5492604338377" target="_blank">2604 338377</a>
 						</article>
 
 					</div>

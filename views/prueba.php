@@ -1,58 +1,76 @@
 <?php
-if (empty($_POST))  {
-  header('Location: ./');
+// Recaptchaa!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$recaptcha_secret = RECAPTCHA_KEY; 
+$recaptcha_response = $_POST['recaptcha_response']; 
+$url = 'https://www.google.com/recaptcha/api/siteverify'; 
+
+$data = array( 'secret' => $recaptcha_secret, 'response' => $recaptcha_response, 'remoteip' => $_SERVER['REMOTE_ADDR'] ); 
+$curlConfig = array( CURLOPT_URL => $url, CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_POSTFIELDS => $data ); 
+$ch = curl_init(); 
+curl_setopt_array($ch, $curlConfig); 
+$response = curl_exec($ch); 
+curl_close($ch);
+
+$jsonResponse = json_decode($response);
+if ($jsonResponse->success === true) { 
+
+	// reviso si post esta vacio
+	if (empty($_POST))  {
+		echo "<script>window.location.replace('http://estudiomartinezrejtman-asoc.com.ar/citaprueba');</script>";
+	}
+	// convierto post en session
+	$_SESSION = $_POST;
+	// llamo a las clases
+	require_once('./clases/area.php');
+	require_once('./clases/cita.php');
+	require_once('./clases/abogada.php');
+										
+	// creo el objeto abogada para tomar datos
+	$mp = new Abogada();
+	// pido datos de token
+	$mp->mpAbogada($_SESSION['abogada']);
+	$datos_mp = $mp->rows;
+
+	// SDK de Mercado Pago
+	require './vendor/autoload.php';
+
+	// separo los datos
+	$token_rejtman = $datos_mp[0]['mp_token_secure'];
+
+	// Agrega credenciales
+	MercadoPago\SDK::setAccessToken($token_rejtman);
+
+	// Crea un objeto de preferencia
+	$preference = new MercadoPago\Preference();
+	$preference->back_urls = array(
+		"success" => "http://estudiomartinezrejtman-asoc.com.ar/success",
+		"failure" => "http://estudiomartinezrejtman-asoc.com.ar/failure",
+		"pending" => "http://estudiomartinezrejtman-asoc.com.ar/pending"
+	);
+	$preference->auto_return = "approved";
+
+	$preference->payment_methods = array(
+		"excluded_payment_types" => array(
+			array("id" => "ticket")
+		),
+		"installments" => 3
+		);
+
+	$datos = array();
+	for($x=0;$x<1;$x++){
+		$item = new MercadoPago\Item();
+		$item->title = 'Consulta Jurídica';
+		$item->quantity = 1;
+		$item->unit_price = 1300;
+		$item->description = "Cita con abogadas de nuestro Staff.";
+		$item->category_id = "service";
+		$datos[] = $item;
+	}
+
+	$preference->items = $datos;
+
+	$preference->save();
 }
-
-$_SESSION = $_POST;
-
-var_dump($_SESSION);
-
-require_once('./clases/area.php');
-require_once('./clases/cita.php');
-require_once('./clases/abogada.php');
-                                    
-                                    
-$mp = new Abogada();
-
-$mp->selectId($_SESSION['abogada']);
-$datos_mp = $mp->rows;
-
-// SDK de Mercado Pago
-require './vendor/autoload.php';
-$token_rejtman = $dato_mp['mp_token_secure'];
-// Agrega credenciales
-MercadoPago\SDK::setAccessToken($token_rejtman);
-
-// Crea un objeto de preferencia
-$preference = new MercadoPago\Preference();
-$preference->back_urls = array(
-    "success" => "http://estudiomartinezrejtman-asoc.com.ar/success",
-    "failure" => "http://estudiomartinezrejtman-asoc.com.ar/failure",
-    "pending" => "http://estudiomartinezrejtman-asoc.com.ar/pending"
-);
-$preference->auto_return = "approved";
-
-$preference->payment_methods = array(
-    "excluded_payment_types" => array(
-      array("id" => "ticket")
-    ),
-    "installments" => 3
-  );
-
-$datos = array();
-for($x=0;$x<1;$x++){
-    $item = new MercadoPago\Item();
-    $item->title = 'Consulta Jurídica';
-    $item->quantity = 1;
-    $item->unit_price = 1300;
-    $item->description = "Cita con abogadas de nuestro Staff.";
-    $item->category_id = "service";
-    $datos[] = $item;
-}
-
-$preference->items = $datos;
-
-$preference->save();
 
 // curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer TEST-5503571218052849-112616-65aa2d57f976a8ee270c33da123e129c-225380343" "https://api.mercadopago.com/users/test_user" -d "{'site_id':'MLA'}"
 
@@ -73,9 +91,9 @@ $preference->save();
 
 
 // Tarjetas
-// Mastercard	5031 7557 3453 0604	123	11/25
-// Visa	4509 9535 6623 3704	123	11/25
-// American Express	3711 803032 57522	1234	11/25
+// Mastercard	5031755734530604	123	11/25
+// Visa	4509953566233704 123	11/25
+// American Express	371180303257522	1234	11/25
 
 // APRO: Pago aprobado.
 // CONT: Pago pendiente.
@@ -91,6 +109,8 @@ $preference->save();
 	<div class="container">
 		<div class="row">
 			<div class="button col-12">
+
+			<?php var_dump($_SESSION);?>
 				<a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
 			</div>
 		</div>

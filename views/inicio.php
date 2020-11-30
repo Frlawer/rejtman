@@ -165,7 +165,7 @@
 								<h3><a href="#">Marta Martínez Rejtman</a></h3>
 							</header>
 							<p>Abogada</p>
-							<p>2604 060984</p>
+							<p>2604 674207</p>
 							<p>martamrejtman@estudiomartinezrejtman-asoc.com.ar</p>
 						</article>
 						<article>

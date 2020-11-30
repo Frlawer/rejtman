@@ -1471,7 +1471,7 @@
 				top: 0;
 				width: 100%;
 				z-index: _misc(z-index-base) + 2;
-				background: #1f1920;
+				background: _palette(dos);
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
 

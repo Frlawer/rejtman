@@ -229,6 +229,12 @@ nav{
 
 @include breakpoint('<=mobile') {
 
+    .headertop{
+        display: none;
+
+
+    }
+    
     // corrección padding servicios
     .ourservicearea{
         

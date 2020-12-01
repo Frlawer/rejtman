@@ -95,6 +95,19 @@ if ($jsonResponse->success === true) {
 // Visa	4509953566233704 123	11/25
 // American Express	371180303257522	1234	11/25
 
+// success?
+// collection_id=1231668602
+// collection_status=approved
+// payment_id=1231668602
+// status=approved
+// external_reference=null
+// payment_type=credit_card
+// merchant_order_id=2041956958
+// preference_id=678313240-2e1fa95a-a4b3-4b79-a35b-f1ad7b3800e3
+// site_id=MLA
+// processing_mode=aggregator
+// merchant_account_id=null
+
 // APRO: Pago aprobado.
 // CONT: Pago pendiente.
 // OTHE: Rechazado por error general.

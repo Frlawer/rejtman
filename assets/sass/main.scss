@@ -517,6 +517,8 @@
 		input[type="password"],
 		input[type="phone"],
 		input[type="time"],
+		input[type="tel"],
+		input[type="number"],
 		select,
 		textarea {
 			-webkit-appearance: none;
@@ -1474,6 +1476,7 @@
 				background: _palette(dos);
 				box-shadow: inset 0px -2px 5px 0px rgba(0, 0, 0, 0.25);
 				font-size: 1em;
+				text-align: center;
 
 				&:before {
 					content: '';

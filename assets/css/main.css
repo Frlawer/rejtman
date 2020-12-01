@@ -1763,6 +1763,7 @@ body.homepage.is-preload #header:after {
       -o-transition: background-color 0.35s ease-in-out;
       -ms-transition: background-color 0.35s ease-in-out;
       transition: background-color 0.35s ease-in-out;
+      backface-visibility: hidden;
       -webkit-backface-visibility: hidden; }
     .carousel .forward:after, .carousel .backward:after {
       content: '';

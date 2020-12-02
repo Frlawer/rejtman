@@ -1,53 +1,51 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 02/12/2020 12:35
+
+  	Creation date: 23/10/2020 22:28
   	*/
 
-@font-face {
-  font-family: "Flaticon";
-  src: url("./Flaticon.eot");
-  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("./Flaticon.woff2") format("woff2"),
-       url("./Flaticon.woff") format("woff"),
-       url("./Flaticon.ttf") format("truetype"),
-       url("./Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "Flaticon";
-    src: url("./Flaticon.svg#Flaticon") format("svg");
-  }
-}
-
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-  font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}
-
-.flaticon-pareja:before { content: "\f100"; }
-.flaticon-casa:before { content: "\f101"; }
-.flaticon-red:before { content: "\f102"; }
-.flaticon-balanza:before { content: "\f103"; }
-.flaticon-abogado:before { content: "\f104"; }
-.flaticon-padres:before { content: "\f105"; }
-.flaticon-no-personas-enfermas:before { content: "\f106"; }
-.flaticon-empleador:before { content: "\f107"; }
-.flaticon-despedido:before { content: "\f108"; }
-.flaticon-ladron:before { content: "\f109"; }
-.flaticon-sombrero-de-graduacion:before { content: "\f10a"; }
-.flaticon-accidente-automovilistico:before { content: "\f10b"; }
-.flaticon-mapa-del-sitio:before { content: "\f10c"; }
-.flaticon-subasta:before { content: "\f10d"; }
-.flaticon-mapa:before { content: "\f10e"; }
-.flaticon-marcador-de-posicion:before { content: "\f10f"; }
-.flaticon-asesoramiento:before { content: "\f110"; }
-.flaticon-herido:before { content: "\f111"; }
-.flaticon-contrato:before { content: "\f112"; }
-.flaticon-tribunal:before { content: "\f113"; }
-.flaticon-tribunal-1:before { content: "\f114"; }
+    @font-face {
+      font-family: "Flaticon";
+      src: url("./Flaticon.eot");
+      src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+           url("./Flaticon.woff2") format("woff2"),
+           url("./Flaticon.woff") format("woff"),
+           url("./Flaticon.ttf") format("truetype"),
+           url("./Flaticon.svg#Flaticon") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      @font-face {
+        font-family: "Flaticon";
+        src: url("./Flaticon.svg#Flaticon") format("svg");
+      }
+    }
+    
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+      font-family: Flaticon;
+            font-size: 20px;
+    font-style: normal;
+    margin-left: 20px;
+    }
+    
+    .flaticon-pareja:before { content: "\f100"; }
+    .flaticon-casa:before { content: "\f101"; }
+    .flaticon-red:before { content: "\f102"; }
+    .flaticon-balanza:before { content: "\f103"; }
+    .flaticon-abogado:before { content: "\f104"; }
+    .flaticon-padres:before { content: "\f105"; }
+    .flaticon-no-personas-enfermas:before { content: "\f106"; }
+    .flaticon-empleador:before { content: "\f107"; }
+    .flaticon-despedido:before { content: "\f108"; }
+    .flaticon-ladron:before { content: "\f109"; }
+    .flaticon-sombrero-de-graduacion:before { content: "\f10a"; }
+    .flaticon-accidente-automovilistico:before { content: "\f10b"; }
+    .flaticon-mapa-del-sitio:before { content: "\f10c"; }
+    .flaticon-subasta:before { content: "\f10d"; }
+    .flaticon-mapa:before { content: "\f10e"; }
+    .flaticon-marcador-de-posicion:before { content: "\f10f"; }
+    .flaticon-asesoramiento:before { content: "\f110"; }
+    .flaticon-herido:before { content: "\f111"; }

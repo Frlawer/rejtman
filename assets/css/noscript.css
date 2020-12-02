@@ -24,7 +24,7 @@ Creation date: 23/10/2020 22:28
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-smooth: antialiased; }
+  font-smoothing: antialiased; }
 
 .flaticon-pareja:before {
   content: "\f100"; }
@@ -79,6 +79,15 @@ Creation date: 23/10/2020 22:28
 
 .flaticon-herido:before {
   content: "\f111"; }
+
+.flaticon-contrato:before {
+  content: "\f112"; }
+
+.flaticon-tribunal:before {
+  content: "\f113"; }
+
+.flaticon-tribunal-1:before {
+  content: "\f114"; }
 
 #top {
   background-color: #931a25;

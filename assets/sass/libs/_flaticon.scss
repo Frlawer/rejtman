@@ -22,22 +22,23 @@
       }
     }
     
-    .fi:before{
-        display: inline-block;
-  font-family: "Flaticon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-    }
 
-    .flaticon-pareja:before { content: "\f100"; }
+    .fi:before{
+      display: inline-block;
+font-family: "Flaticon";
+font-style: normal;
+font-weight: normal;
+font-variant: normal;
+line-height: 1;
+text-decoration: inherit;
+text-rendering: optimizeLegibility;
+text-transform: none;
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+font-smoothing: antialiased;
+  }
+
+  .flaticon-pareja:before { content: "\f100"; }
 .flaticon-casa:before { content: "\f101"; }
 .flaticon-red:before { content: "\f102"; }
 .flaticon-balanza:before { content: "\f103"; }
@@ -58,25 +59,27 @@
 .flaticon-contrato:before { content: "\f112"; }
 .flaticon-tribunal:before { content: "\f113"; }
 .flaticon-tribunal-1:before { content: "\f114"; }
-    
-    $font-Flaticon-pareja: "\f100";
-    $font-Flaticon-casa: "\f101";
-    $font-Flaticon-red: "\f102";
-    $font-Flaticon-balanza: "\f103";
-    $font-Flaticon-abogado: "\f104";
-    $font-Flaticon-padres: "\f105";
-    $font-Flaticon-no-personas-enfermas: "\f106";
-    $font-Flaticon-empleador: "\f107";
-    $font-Flaticon-despedido: "\f108";
-    $font-Flaticon-ladron: "\f109";
-    $font-Flaticon-sombrero-de-graduacion: "\f10a";
-    $font-Flaticon-accidente-automovilistico: "\f10b";
-    $font-Flaticon-mapa-del-sitio: "\f10c";
-    $font-Flaticon-subasta: "\f10d";
-    $font-Flaticon-mapa: "\f10e";
-    $font-Flaticon-marcador-de-posicion: "\f10f";
-    $font-Flaticon-asesoramiento: "\f110";
-    $font-Flaticon-herido: "\f111";
-    $font-Flaticon-contrato: "\f112";
-    $font-Flaticon-tribunal: "\f113";
-    $font-Flaticon-tribunal-1: "\f114";
+.flaticon-contrato-1:before { content: "\f115"; }
+  
+  $font-Flaticon-pareja: "\f100";
+  $font-Flaticon-casa: "\f101";
+  $font-Flaticon-red: "\f102";
+  $font-Flaticon-balanza: "\f103";
+  $font-Flaticon-abogado: "\f104";
+  $font-Flaticon-padres: "\f105";
+  $font-Flaticon-no-personas-enfermas: "\f106";
+  $font-Flaticon-empleador: "\f107";
+  $font-Flaticon-despedido: "\f108";
+  $font-Flaticon-ladron: "\f109";
+  $font-Flaticon-sombrero-de-graduacion: "\f10a";
+  $font-Flaticon-accidente-automovilistico: "\f10b";
+  $font-Flaticon-mapa-del-sitio: "\f10c";
+  $font-Flaticon-subasta: "\f10d";
+  $font-Flaticon-mapa: "\f10e";
+  $font-Flaticon-marcador-de-posicion: "\f10f";
+  $font-Flaticon-asesoramiento: "\f110";
+  $font-Flaticon-herido: "\f111";
+  $font-Flaticon-contrato: "\f112";
+  $font-Flaticon-tribunal: "\f113";
+  $font-Flaticon-tribunal-1: "\f114";
+  $font-Flaticon-contrato-1: "\f115";

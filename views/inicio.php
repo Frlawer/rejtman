@@ -147,7 +147,7 @@
 									</div>
 									<div class="servicecontent">
 										<h3>Comercial - Empresarial</h3>
-										<p>Asesoramiento integral a Empresas, Relaciones laborales, Planificación societaria y tributaria. Contratos Asociativos, Sociedades Comerciales.</p>
+										<p>Asesoramiento integral a Empresas, Relaciones laborales, Planificación societaria y tributaria. Contratos Asociativos, Sociedades Comercialesgit .</p>
 									</div>
 								</div>
 							</div>

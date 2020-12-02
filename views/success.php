@@ -3,7 +3,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-var_dump($_SESSION);
 // Código para procesar el formulario
 
 if (array_key_exists('email', $_SESSION)) {
@@ -123,16 +122,14 @@ if (array_key_exists('email', $_SESSION)) {
         
         if(!$mail2->send()){
             echo 'Error: '.$mail->ErrorInfo;
-            echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj cliente error</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
         }else{
             // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
             // <a href="/" class="scrolly">Volver a inicio</a>
             // </div></div></div></div></div>';
         }
-        echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h3>Gracias por solicitar tu cita con nuestras abogadas. En breve recibirás un email con los datos necesarios para poder concretar tu asesoramiento</a></h3><a class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></a></div></div></div></div>';
 
     }else{
-        echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email invalido</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
+
     } 
     // if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
     //     header('Location : estudiomartinezrejtman-asoc.com.ar/cita');

@@ -119,13 +119,15 @@ if ($jsonResponse->success === true) {
 
 ?>
 <div class="contactarea wrapper" id="contactarea">
-	<div class="container">
-		<div class="row">
-			<div class="button col-12">
-
-			<?php var_dump($_SESSION);?>
-				<a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a>
-			</div>
-		</div>
-	</div>
+	<article class="container special">
+		<header>
+			<h2>Abonar la consulta Jurídica.</h2>
+			<p>Para poder agendar la cita es necesario abonar la misma a través de MercadoPago. Recibimos débito, credito y pagos con tu cuenta de MP.</p>
+		</header>
+		<footer>
+			<a href="<?php echo $preference->init_point; ?>" class="button">
+					Pagar la cita por Mercado Pago
+			</a>
+		</footer>
+	</article>
 </div>

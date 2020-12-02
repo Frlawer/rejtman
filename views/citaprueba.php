@@ -62,7 +62,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="tel">Teléfono:</label>
-                                <input type="tel" name="tel" pattern="[0-9]{11}" class="form-control" placeholder="Solo números!" >
+                                <input type="tel" name="tel" pattern="[0-9]{*}" class="form-control" placeholder="Solo números!" >
                             </div>
                         </div>
                         

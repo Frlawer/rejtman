@@ -140,15 +140,25 @@
 									</div>
 								</div>
 							</div>
+							<div class="col-6 col-12-mobile">
+								<div class="servicewrap">
+									<div class="serviceicon col-12-mobile">
+										<i class="fi flaticon-contrato-1"></i>
+									</div>
+									<div class="servicecontent">
+										<h3>Comercial - Empresarial</h3>
+										<p>Asesoramiento integral a Empresas, Relaciones laborales, Planificación societaria y tributaria. Contratos Asociativos, Sociedades Comerciales, Constitución de Fondos Comunes de Inversión, Gestión y redacción de proyectos para la obtención de líneas de financiamiento, Recursos Humanos, Identificación de riesgos y contingencias, Diseño e Implementación de Programas de Mejora de Productividad.</p>
+									</div>
+								</div>
 							</div>
 							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
-										<i class="fi flaticon-pareja"></i>
+										<i class="fi flaticon-tribunal-1"></i>
 									</div>
 									<div class="servicecontent">
-										<h3>Comercial / Empresarial</h3>
-										<p>Asesoramiento integral a Empresas, Relaciones laborales, Planificación societaria y tributaria. Contratos Asociativos, Sociedades Comerciales, Constitución de Fondos Comunes de Inversión, Gestión y redacción de proyectos para la obtención de líneas de financiamiento, Recursos Humanos, Identificación de riesgos y contingencias, Diseño e Implementación de Programas de Mejora de Productividad.</p>
+										<h3>Contratos - Fideicomisos</h3>
+										<p>Asesoramiento integral para las diferentes figuras contractuales amparadas por el Derecho Civil y Comercial. Fideicomiso Inmobiliario.</p>
 									</div>
 								</div>
 							</div>

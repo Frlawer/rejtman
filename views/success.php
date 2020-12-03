@@ -27,7 +27,6 @@ if (array_key_exists('email', $_SESSION)) {
             $_SESSION['nombre'], 
             $_SESSION['apellido'], 
             $_SESSION['email'],
-            '', 
             $_SESSION['dni'], 
             $_SESSION['tel'], 
             '', 
@@ -52,7 +51,17 @@ if (array_key_exists('email', $_SESSION)) {
         
         // Cargo la Cita a BD
 
-        $cita = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $horario, $desc);
+        $cita = new Cita(
+            null, 
+            $area, 
+            $abogada, 
+            $nombre, 
+            $email, 
+            $tel,
+            $fecha_db,
+            $horario, 
+            $desc
+        );
         $cita->insert();
 
         // consulto datos para envíar email a abogada
@@ -131,9 +140,6 @@ if (array_key_exists('email', $_SESSION)) {
     }else{
 
     } 
-    // if (!empty($msj) || !empty($msj1) || !empty($msj2)) {
-    //     header('Location : estudiomartinezrejtman-asoc.com.ar/cita');
-    // } 
 ?>
 <!-- contacto -->
 <div class="contactarea wrapper" id="contactarea">

@@ -31,7 +31,7 @@ if (!$order_by) {
 
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
-$select = array('cliente_id', 'cliente_nombre', 'cliente_tel', 'cliente_dir', 'cliente_email', 'cliente_desc');
+$select = array('cliente_id', 'cliente_nombre', 'cliente_apellido', 'cliente_email', 'cliente_dni', 'cliente_tel', 'cliente_dir', 'cliente_desc');
 
 //Start building query according to input parameters.
 // If search string
@@ -105,10 +105,12 @@ if ($order_by == 'Desc') {
         <thead>
             <tr>
                 <th width="5%">ID</th>
-                <th width="25%">Nombre</th>
-                <th width="15%">Telefono</th>
-                <th width="25%">Dirección</th>
+                <th width="15%">Nombre</th>
+                <th width="15%">Apellido</th>
                 <th width="10%">Email</th>
+                <th width="5%">DNI</th>
+                <th width="10%">Telefono</th>
+                <th width="20%">Dirección</th>
                 <th width="20%">Descripción</th>
             </tr>
         </thead>
@@ -117,9 +119,11 @@ if ($order_by == 'Desc') {
             <tr>
                 <td><?php echo $row['cliente_id']; ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_nombre']); ?></td>
+                <td><?php echo htmlspecialchars($row['cliente_apellido']); ?></td>
+                <td><?php echo htmlspecialchars($row['cliente_email']); ?></td>
+                <td><?php echo htmlspecialchars($row['cliente_dni']); ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_tel']); ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_dir']); ?></td>
-                <td><?php echo htmlspecialchars($row['cliente_email']); ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_desc']); ?></td>
                 <td>
                     <a href="edit_customer.php?customer_id=<?php echo $row['id']; ?>&operation=edit" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>

@@ -15,8 +15,8 @@ class Cliente extends DBconn {
 		$cliente_nombre = '',
 		$cliente_apellido = '',
 		$cliente_email = '',
-		$cliente_dni = '',
-		$cliente_tel = '',
+		$cliente_dni = 0,
+		$cliente_tel = 0,
 		$cliente_dir = '',
 		$cliente_desc = ''
 		)

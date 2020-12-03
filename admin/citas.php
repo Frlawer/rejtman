@@ -31,8 +31,18 @@ if (!$order_by) {
 
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
-$select = array('cita_id', 'area_id', 'abogada_id', 'cita_nombre', 'cita_fecha', 'horario_id');
-// SELECT * FROM horario INNER JOIN abogada_horario WHERE abogada_horario.abogada_id = ".$abogada_id." AND abogada_horario.horario_id = horario.horario_id
+// joins inner
+$db->join('area a','c.area_id = a.area_id','INNER');
+$db->join('abogada b','c.abogada_id = b.abogada_id','INNER');
+$db->join('horario h','c.horario_id = h.horario_id','INNER');
+
+// SELECT *
+// FROM cita c INNER JOIN area a
+// ON c.area_id = a.area_id INNER JOIN abogada b
+// ON c.abogada_id = b.abogada_id INNER JOIN horario h
+// ON c.horario_id = h.horario_id
+
+$select = array('c.cita_id', 'a.area_nombre', 'b.abogada_nombre', 'c.cita_nombre', 'c.cita_email', 'c.cita_tel', 'c.cita_fecha', 'h.horario_hora', 'c.cita_desc');
 
 //Start building query according to input parameters.
 // If search string
@@ -50,7 +60,7 @@ if ($order_by) {
 $db->pageLimit = $pagelimit;
 
 // Get result of the query.
-$rows = $db->arraybuilder()->paginate('cita', $page, $select);
+$rows = $db->arraybuilder()->paginate('cita c', $page, $select);
 $total_pages = $db->totalPages;
 
 include BASE_PATH . '/includes/header.php';
@@ -105,23 +115,29 @@ if ($order_by == 'Desc') {
     <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
-                <th width="5%">ID</th>
-                <th width="25%">Area</th>
+                <th width="2%">ID</th>
+                <th width="15%">Area</th>
                 <th width="15%">Abogada</th>
-                <th width="25%">Nombre</th>
-                <th width="10%">Fecha</th>
-                <th width="20%">Hora</th>
+                <th width="15%">Nombre</th>
+                <th width="15%">Email</th>
+                <th width="10%">Teléfono</th>
+                <th width="7%">Fecha</th>
+                <th width="5%">Hora</th>
+                <th width="16%">Descripción</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($rows as $row): ?>
             <tr>
                 <td><?php echo $row['cita_id']; ?></td>
-                <td><?php echo htmlspecialchars($row['area_id']); ?></td>
-                <td><?php echo htmlspecialchars($row['abogada_id']); ?></td>
+                <td><?php echo htmlspecialchars($row['area_nombre']); ?></td>
+                <td><?php echo html_entity_decode($row['abogada_nombre']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_nombre']); ?></td>
+                <td><?php echo htmlspecialchars($row['cita_email']); ?></td>
+                <td><?php echo htmlspecialchars($row['cita_tel']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_fecha']); ?></td>
-                <td><?php echo htmlspecialchars($row['horario_id']); ?></td>
+                <td><?php echo htmlspecialchars($row['horario_hora']); ?></td>
+                <td><?php echo htmlspecialchars($row['cita_desc']); ?></td>
                 <td>
                     <a href="edit_customer.php?customer_id=<?php echo $row['id']; ?>&operation=edit" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger delete_btn" data-toggle="modal" data-target="#confirm-delete-<?php echo $row['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>

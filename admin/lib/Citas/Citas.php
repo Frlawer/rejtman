@@ -24,11 +24,7 @@ class Citas
             'cita_id' => 'ID',
             'area_id' => 'Area',
             'abogada_id' => 'Abogada',
-            'cita_nombre' => 'Nombre',
-            'cita_email' => 'Email',
-            'cita_fecha' => 'Fecha',
-            'horario_id' => 'Hora',
-            'cita_desc' => 'Descripción'
+            'cita_fecha' => 'Fecha'
         ];
 
         return $ordering;

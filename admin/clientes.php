@@ -104,10 +104,10 @@ if ($order_by == 'Desc') {
     <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
-                <th width="5%">ID</th>
+                <th width="3%">ID</th>
                 <th width="15%">Nombre</th>
                 <th width="15%">Apellido</th>
-                <th width="10%">Email</th>
+                <th width="12%">Email</th>
                 <th width="5%">DNI</th>
                 <th width="10%">Telefono</th>
                 <th width="20%">Dirección</th>

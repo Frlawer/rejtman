@@ -87,7 +87,7 @@
 										<ul class="icons">
 											<li><a href="https://www.facebook.com/Estudio-Jur%C3%ADdico-Mart%C3%ADnez-Rejtman-104845014737833" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
 											<li><a href="https://www.instagram.com/ejuridico.martinezrejtman/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="https://wa.me/+5492995812837" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
+											<li><a href="https://wa.me/+5492604421819" class="icon brands fa-whatsapp"><span class="label">Whatsapp</span></a></li>
 											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 										</ul>
 									</section>

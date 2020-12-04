@@ -101,8 +101,8 @@
 										<i class="fi flaticon-no-personas-enfermas"></i>
 									</div>
 									<div class="servicecontent">
-										<h3>Divorcios Express</h3>
-										<p>División de Bienes Alimentos. Régimen de comunicación</p>
+										<h3>Derecho de Familia</h3>
+										<p>División de Bienes, Acuerdos pre-matrimoniales, Reclamos por Alimentos, Daños y perjuicios derivados de conflictos matrimoniales, Divorcios, Exclusión o Inclusión del Hogar, Guarda, Inhabilitaciones, Patria Potestad, Separación Personal, Régimen de Comunicación, Violencia Familiar.</p>
 									</div>
 								</div>
 							</div>

@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Código para procesar el formulario
-
+var_dump($_SESSION);
 if (array_key_exists('email', $_SESSION)) {
     date_default_timezone_set('Etc/UTC');
 

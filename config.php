@@ -46,7 +46,7 @@ define('BASE_URL','http://www.estudiomartinezrejtman-asoc.com.ar/');
   |--------------------------------------------------------------------------
   |
  */
-define('NOMBRE_ESTUDIO','Estudio Jur&iacute;dico Mart&iacute;nez Rejtman &amp; Asoc.');
+define('NOMBRE_ESTUDIO','Estudio Jurídico Martínez Rejtman & Asoc.');
 
 
 /*

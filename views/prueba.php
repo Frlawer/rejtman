@@ -62,7 +62,7 @@ if ($jsonResponse->success === true) {
 		$item->title = 'Consulta Jurídica';
 		$item->quantity = 1;
 		$item->unit_price = 1300;
-		$item->description = "Cita con abogadas de nuestro Staff.";
+		$item->description = "Cita con abogadas de nuestro Staff. Estudio Jurídico Martinez Rejtman & Asoc.";
 		$item->category_id = "service";
 		$datos[] = $item;
 	}

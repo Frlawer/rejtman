@@ -4,7 +4,6 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 // Código para procesar el formulario
-var_dump($_SESSION);
 if (array_key_exists('email', $_SESSION)) {
     date_default_timezone_set('Etc/UTC');
 
@@ -20,50 +19,30 @@ if (array_key_exists('email', $_SESSION)) {
         require_once('./clases/cliente.php');
         require_once('./clases/cuenta.php');
         
-        // Cargo cliente BD
-
-        $cliente = new Cliente(
-            null, 
-            $_SESSION['nombre'], 
-            $_SESSION['apellido'], 
-            $_SESSION['email'],
-            $_SESSION['dni'], 
-            $_SESSION['tel'], 
-            '', 
-            $_SESSION['desc']
-        );
-        $cliente->insert();
-
         // seteo las session
-
-        $area = $_SESSION['area'];
-        $abogada = $_SESSION['abogada'];
+        
         $nombre = htmlentities($_SESSION['nombre'], ENT_QUOTES, "UTF-8");
         $apellido = htmlentities($_SESSION['apellido'], ENT_QUOTES, "UTF-8");
         $email = htmlentities($_SESSION['email'], ENT_QUOTES, "UTF-8");
-        $tel = $_SESSION['dni'];
+        $dni = $_SESSION['dni'];
         $tel = $_SESSION['tel'];
+        $area = $_SESSION['area'];
+        $abogada = $_SESSION['abogada'];
         $date = date_create($_SESSION['fecha']);
         $fecha_db = date_format($date, 'Y-m-d');
         $fecha = date_format($date, 'm-d-Y');
         $horario = $_SESSION['hora'];
         $desc = htmlentities($_SESSION['desc'], ENT_QUOTES, "UTF-8");
         
+        // Cargo cliente BD
+        $cliente2 = new Cliente(null, $nombre, $apellido, $email, $dni, $tel, ' ', $desc);
+        $cliente2->insert();
+        
         // Cargo la Cita a BD
-
-        $cita = new Cita(
-            null, 
-            $area, 
-            $abogada, 
-            $nombre, 
-            $email, 
-            $tel,
-            $fecha_db,
-            $horario, 
-            $desc
-        );
-        $cita->insert();
-
+        
+        $cita2 = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $horario, $desc);
+        $cita2->insert();
+        
         // consulto datos para envíar email a abogada
 
         $data_area = new Area();
@@ -107,11 +86,6 @@ if (array_key_exists('email', $_SESSION)) {
         if(!$mail->send()){
             echo 'Error: '.$mail->ErrorInfo;
             echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Email a abogada falló</a></h2><div class="button text-right "><a href="/" class="scrolly">Volver a inicio</a></div></div></div></div></div>';
-        }else{
-            // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>Msj abogada enviado</a></h2><div class="button text-right ">
-            // <a href="/" class="scrolly">Volver a inicio</a>
-            // </div></div></div></div></div>'; 
-            //  'Error: '.$mail->ErrorInfo;}
         }
         
         // email a cliente
@@ -131,14 +105,9 @@ if (array_key_exists('email', $_SESSION)) {
         
         if(!$mail2->send()){
             echo 'Error: '.$mail->ErrorInfo;
-        }else{
-            // echo '<div class="wrapper"><div class="container"><div class="row"><div class="msj-ok"><h2>msj cliente enviado.</a></h2><div class="button text-right ">
-            // <a href="/" class="scrolly">Volver a inicio</a>
-            // </div></div></div></div></div>';
         }
 
-    }else{
-
+        session_destroy();
     } 
 ?>
 <!-- contacto -->

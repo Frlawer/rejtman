@@ -15,8 +15,8 @@ class Cliente extends DBconn {
 		$cliente_nombre = '',
 		$cliente_apellido = '',
 		$cliente_email = '',
-		$cliente_dni = 0,
-		$cliente_tel = 0,
+		$cliente_dni = '',
+		$cliente_tel = '',
 		$cliente_dir = '',
 		$cliente_desc = ''
 		)
@@ -50,7 +50,7 @@ class Cliente extends DBconn {
 			'".$this->cliente_dir."',
 			'".$this->cliente_desc."'
 			)";
-        $this->execute_single_query();
+		$this->execute_single_query();
     }
 
     protected function delete() {

@@ -19,7 +19,7 @@ class Cita extends DBconn {
 		$cita_email = '',
 		$cita_tel = '',
 		$cita_fecha = '',
-		$horario_id = '',
+		$horario_id = 0,
 		$cita_desc = ''
 		)
 	{
@@ -36,25 +36,27 @@ class Cita extends DBconn {
 
 
     function insert() {
-        $this->query = "INSERT INTO cita (
-			area_id,
-			abogada_id,
-			cita_nombre,
-			cita_email,
-			cita_tel,
-			cita_fecha,
-			horario_id,
-			cita_desc
-			) VALUES(
-			'".$this->area_id."',
-			'".$this->abogada_id."',
-			'".$this->cita_nombre."',
-			'".$this->cita_email."',
-			'".$this->cita_tel."',
-			'".$this->cita_fecha."',
-			'".$this->horario_id."',
-			'".$this->cita_desc."'
-			)";
+        $this->query = "INSERT INTO `cita` (
+			`cita_id`, 
+			`area_id`, 
+			`abogada_id`, 
+			`cita_nombre`, 
+			`cita_email`, 
+			`cita_tel`,
+			`cita_fecha`, 
+			`horario_id`, 
+			`cita_desc`
+		) VALUES (
+			NULL, 
+			$this->area_id, 
+			$this->abogada_id, 
+			$this->cita_nombre, 
+			$this->cita_email,
+			$this->cita_tel, 
+			$this->cita_fecha, 
+			$this->horario_id, 
+			$this->cita_desc
+			);";
         $this->execute_single_query();
     }
 

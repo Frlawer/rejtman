@@ -135,7 +135,7 @@ if ($order_by == 'Desc') {
                 <td><?php echo htmlspecialchars($row['cita_nombre']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_email']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_tel']); ?></td>
-                <td><?php echo htmlspecialchars($row['cita_fecha']); ?></td>
+                <td><?php $originalDate = $row['horario_hora']; $newDate = date("d-m-Y", strtotime($originalDate));echo htmlspecialchars($newDate); ?></td>
                 <td><?php echo htmlspecialchars($row['horario_hora']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_desc']); ?></td>
                 <td>

@@ -10,7 +10,7 @@
  * @copyright Copyright (c) 2010-2017
  * @license   http://opensource.org/licenses/gpl-3.0.html GNU Public License
  * @link      http://github.com/joshcam/PHP-MySQLi-Database-Class 
- * @version   2.9.2
+ * @version   2.9.3
  */
 
 class MysqliDb
@@ -428,11 +428,7 @@ class MysqliDb
      */
     public static function getInstance()
     {
-        if(isset(self::$_instance)) {
-            return self::$_instance;
-        } else {
-            return new MysqliDb();
-        }
+        return self::$_instance;
     }
 
     /**
@@ -548,6 +544,22 @@ class MysqliDb
     }
 
     /**
+     * Prefix add raw SQL query.
+     *
+     * @author Emre Emir <https://github.com/bejutassle>
+     * @param string $query      User-provided query to execute.
+     * @return string Contains the returned rows from the query.
+     */
+    public function rawAddPrefix($query){
+        $query = str_replace(PHP_EOL, null, $query);
+        $query = preg_replace('/\s+/', ' ', $query);
+        preg_match_all("/(from|into|update|join) [\\'\\´]?([a-zA-Z0-9_-]+)[\\'\\´]?/i", $query, $matches);
+        list($from_table, $from, $table) = $matches;
+
+        return str_replace($table[0], self::$prefix.$table[0], $query);
+    }
+
+    /**
      * Execute raw SQL query.
      *
      * @param string $query      User-provided query to execute.
@@ -558,6 +570,7 @@ class MysqliDb
      */
     public function rawQuery($query, $bindParams = null)
     {
+        $query = $this->rawAddPrefix($query);
         $params = array(''); // Create the empty 0 index
         $this->_query = $query;
         $stmt = $this->_prepareQuery();
@@ -968,12 +981,6 @@ class MysqliDb
      */
     public function where($whereProp, $whereValue = 'DBNULL', $operator = '=', $cond = 'AND')
     {
-        // forkaround for an old operation api
-        if (is_array($whereValue) && ($key = key($whereValue)) != "0") {
-            $operator = $key;
-            $whereValue = $whereValue[$key];
-        }
-
         if (count($this->_where) == 0) {
             $cond = '';
         }
@@ -1845,7 +1852,7 @@ class MysqliDb
         $dataColumns = array_keys($tableData);
         if ($isInsert) {
             if (isset ($dataColumns[0]))
-                $this->_query .= ' (`' . implode($dataColumns, '`, `') . '`) ';
+                $this->_query .= ' (`' . implode('`, `', $dataColumns) . '`) ';
             $this->_query .= ' VALUES (';
         } else {
             $this->_query .= " SET ";
@@ -2421,7 +2428,7 @@ class MysqliDb
      */
     public function joinWhere($whereJoin, $whereProp, $whereValue = 'DBNULL', $operator = '=', $cond = 'AND')
     {
-        $this->_joinAnd[$whereJoin][] = Array ($cond, $whereProp, $operator, $whereValue);
+        $this->_joinAnd[self::$prefix . $whereJoin][] = Array ($cond, $whereProp, $operator, $whereValue);
         return $this;
     }
 

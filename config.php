@@ -13,7 +13,24 @@ $arr = array('inicio','nosotros', 'cita', 'submitform','pruebas', 'citaprueba','
   |--------------------------------------------------------------------------
   |
  */
-define('MOSTRAR_ERRORES', 'SI');//SI ó NO
+define('MOSTRAR_ERRORES', 'NO');//SI ó NO
+/*
+|--------------------------------------------------------------------------
+| DATABASE CONFIGURATION
+|--------------------------------------------------------------------------
+*/
+
+define('DB_HOST', "localhost");
+define('DB_USER', "c1980986_rejtman");
+define('DB_PASSWORD', "69meduZUsa");
+define('DB_NAME', "c1980986_rejtman");
+
+/**
+ * Get instance of DB object
+ */
+function getDbInstance() {
+    return new MysqliDb(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+}
 
 /*
   |--------------------------------------------------------------------------

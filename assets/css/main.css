@@ -218,6 +218,9 @@ nav {
         color: #f5efef;
         margin-bottom: 0; }
 
+.contactarea #mp-img {
+  text-align: center; }
+
 #footer ul li {
   list-style: none; }
 #footer span {

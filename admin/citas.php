@@ -131,13 +131,13 @@ if ($order_by == 'Desc') {
             <tr>
                 <td><?php echo $row['cita_id']; ?></td>
                 <td><?php echo htmlspecialchars($row['area_nombre']); ?></td>
-                <td><?php echo html_entity_decode($row['abogada_nombre']); ?></td>
-                <td><?php echo htmlspecialchars($row['cita_nombre']); ?></td>
+                <td><?php echo htmlspecialchars_decode($row['abogada_nombre']); ?></td>
+                <td><?php echo htmlspecialchars_decode($row['cita_nombre']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_email']); ?></td>
                 <td><?php echo htmlspecialchars($row['cita_tel']); ?></td>
                 <td><?php $originalDate = $row['horario_hora']; $newDate = date("d-m-Y", strtotime($originalDate));echo htmlspecialchars($newDate); ?></td>
                 <td><?php echo htmlspecialchars($row['horario_hora']); ?></td>
-                <td><?php echo htmlspecialchars($row['cita_desc']); ?></td>
+                <td><?php echo htmlspecialchars_decode($row['cita_desc']); ?></td>
                 <td>
                     <a href="edit_customer.php?customer_id=<?php echo $row['id']; ?>&operation=edit" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger delete_btn" data-toggle="modal" data-target="#confirm-delete-<?php echo $row['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>

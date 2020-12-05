@@ -124,9 +124,12 @@ if ($jsonResponse->success === true) {
 			<h2>Abonar la consulta Jurídica.</h2>
 			<p>Para poder agendar la cita es necesario abonar la misma a través de MercadoPago. Recibimos débito, credito y pagos con tu cuenta de MP.</p>
 		</header>
+		<div class="col-12" id="mp-img">
+			<img src="https://imgmp.mlstatic.com/org-img/banners/ar/medios/online/468X60.jpg" title="Mercado Pago - Medios de pago" alt="Mercado Pago - Medios de pago" width="468"/>
+		</div>
 		<footer>
 			<a href="<?php echo $preference->init_point; ?>" class="button">
-					Pagar la cita por Mercado Pago
+					Abonar la cita por Mercado Pago
 			</a>
 		</footer>
 	</article>

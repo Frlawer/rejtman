@@ -124,7 +124,7 @@ if ($order_by == 'Desc') {
                 <td><?php echo htmlspecialchars($row['cliente_dni']); ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_tel']); ?></td>
                 <td><?php echo htmlspecialchars($row['cliente_dir']); ?></td>
-                <td><?php echo htmlspecialchars($row['cliente_desc']); ?></td>
+                <td><?php echo htmlspecialchars_decode($row['cliente_desc']); ?></td>
                 <td>
                     <a href="edit_customer.php?customer_id=<?php echo $row['id']; ?>&operation=edit" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger delete_btn" data-toggle="modal" data-target="#confirm-delete-<?php echo $row['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>

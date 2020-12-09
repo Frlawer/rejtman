@@ -128,7 +128,7 @@ if (array_key_exists('email', $_SESSION)) {
     $mail2->addAddress($email);
     $mail2->isHTML(true);
     $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO;
-    $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1><h2>¡Gracias por solicitar una cita con nuestro Staff!</h2><p>Los pasos a seguir son los siguientes:</p><p>Recuerda que debes abonar la consulta anticipadamente a través de los siguientes medios de pago.</p><p>';
+    $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1><h2>¡Gracias por solicitar una cita con nuestro Staff!</h2><p>Los pasos a seguir son los siguientes:</p><p>Si recibiste este email significa que la consulta fue abonada correctamente, y la cita fue programada en el día solicitado. En cualquier situación que no sea posible realizar la misma nos pondremos en contactto con uds para informar cualquier cambio realizado.</p>';
     foreach ($datos_cuenta as $key => $value) {
         $mail2->Body .= '<h3>'.$value['cuenta_nombre'].'</h3>';
         $mail2->Body .= '<p>'.$value['cuenta_datos'].'</p>';

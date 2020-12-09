@@ -30,7 +30,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="nombre">Nombre</label>
-                                <input placeholder="Tu nombre" name="nombre" class="form-control" type="text" value="" required>
+                                <input placeholder="Tu nombre" name="nombre" class="form-control" type="text" value="" required autocomplete="off">
                             </div>
                         </div>
                         
@@ -38,7 +38,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="apellido">Apellido:</label>
-                                <input placeholder="Apellido" name="apellido" class="form-control" type="text" value="" required>
+                                <input placeholder="Apellido" name="apellido" class="form-control" type="text" value="" required autocomplete="off">
                             </div>
                         </div>
                         
@@ -46,7 +46,7 @@ $datos_area = $area->rows;
                         <div class="col-12">
                             <div class="formInput">
                                 <label for="email">Email:</label>
-                                <input placeholder="Correo electrónico" name="email" class="form-control" type="email" value="" required>
+                                <input placeholder="Correo electrónico" name="email" class="form-control" type="email" value="" required autocomplete="off">
                             </div>
                         </div>
                         
@@ -54,7 +54,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="dni">DNI:</label>
-                                <input placeholder="DNI" name="dni" class="form-control" type="number" value="" required>
+                                <input placeholder="DNI" name="dni" class="form-control" type="number" value="" required autocomplete="off">
                             </div>
                         </div>
                         
@@ -62,7 +62,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="tel">Teléfono:</label>
-                                <input type="tel" name="tel" pattern="[0-9]{*}" class="form-control" placeholder="Solo números!" required>
+                                <input type="tel" name="tel" pattern="[0-9]{*}" class="form-control" placeholder="Solo números!" required autocomplete="off">
                             </div>
                         </div>
                         
@@ -70,7 +70,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">
                                 <label for="area">Area Jurídica:</label>
-                                <select class="form-control" name="area" id="drop_1" required>
+                                <select class="form-control" name="area" id="drop_1" required autocomplete="off">
                                     <option value="0" selected="selected">Selecciona Area</option>
                                     <?php 
                                     foreach ($datos_area as $key => $value) {
@@ -98,7 +98,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">	
                                 <label for="fecha">Fecha:</label>
-                                <input placeholder="Fecha" name="fecha" type="text" id="datepicker" class="form-control" required>
+                                <input placeholder="Fecha" name="fecha" type="text" id="datepicker" class="form-control" required autocomplete="off">
                             </div>
                         </div>
 
@@ -106,7 +106,7 @@ $datos_area = $area->rows;
                         <div class="col-6 col-12-mobile">
                             <div class="formInput">	
                                 <label for="hora">Hora:</label>
-                                <select name="hora" id="hora" class="form-control" required>
+                                <select name="hora" id="hora" class="form-control" required autocomplete="off">
                                     <option value="" disabled selected>Selecciona horario</option>
                                 </select>
                             </div>
@@ -116,7 +116,7 @@ $datos_area = $area->rows;
                         <div class="col-12">
                             <div class="formInput">
                                 <label for="desc">Descripción:</label>
-                                <textarea class="form-control" placeholder="Descripción del caso..." name="desc" required></textarea>
+                                <textarea class="form-control" placeholder="Descripción del caso..." name="desc" required autocomplete="off"></textarea>
                             </div>
                         
                         </div>

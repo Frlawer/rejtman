@@ -61,19 +61,19 @@ include BASE_PATH.'/includes/header.php';
 <div id="page-" class="col-md-4 col-md-offset-4">
 	<form class="form loginform" method="POST" action="authenticate.php">
 		<div class="login-panel panel panel-default">
-			<div class="panel-heading">Please Sign in</div>
+			<div class="panel-heading">Iniciar sesión</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<label class="control-label">username</label>
+					<label class="control-label">Usuario</label>
 					<input type="text" name="username" class="form-control" required="required">
 				</div>
 				<div class="form-group">
-					<label class="control-label">password</label>
+					<label class="control-label">Contraseña</label>
 					<input type="password" name="passwd" class="form-control" required="required">
 				</div>
 				<div class="checkbox">
 					<label>
-						<input name="remember" type="checkbox" value="1">Remember Me
+						<input name="remember" type="checkbox" value="1">Recordarme
 					</label>
 				</div>
 				<?php if (isset($_SESSION['login_failure'])): ?>
@@ -85,7 +85,7 @@ include BASE_PATH.'/includes/header.php';
 					?>
 				</div>
 				<?php endif; ?>
-				<button type="submit" class="btn btn-success loginField">Login</button>
+				<button type="submit" class="btn btn-success loginField">Ingresar</button>
 			</div>
 		</div>
 	</form>

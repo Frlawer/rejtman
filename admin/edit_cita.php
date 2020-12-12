@@ -5,7 +5,7 @@ require_once 'includes/auth_validate.php';
 
 
 // Sanitize if you want
-$cliente_id = filter_input(INPUT_GET, 'cliente_id', FILTER_VALIDATE_INT);
+$cita_id = filter_input(INPUT_GET, 'cita_id', FILTER_VALIDATE_INT);
 $operation = filter_input(INPUT_GET, 'operation',FILTER_SANITIZE_STRING); 
 ($operation == 'edit') ? $edit = true : $edit = false;
 $db = getDbInstance();
@@ -14,21 +14,21 @@ $db = getDbInstance();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
     //Get customer id form query string parameter.
-    $cliente_id = filter_input(INPUT_GET, 'cliente_id', FILTER_SANITIZE_STRING);
+    $cita_id = filter_input(INPUT_GET, 'cita_id', FILTER_SANITIZE_STRING);
 
     //Get input data
     $data_to_update = filter_input_array(INPUT_POST);
     
     $data_to_update['update_at'] = date('Y-m-d H:i:s');
     $db = getDbInstance();
-    $db->where('cliente_id',$cliente_id);
-    $stat = $db->update('cliente', $data_to_update);
+    $db->where('cita_id',$cita_id);
+    $stat = $db->update('cita', $data_to_update);
 
     if($stat)
     {
         $_SESSION['success'] = "Cliente actualizado con éxito!";
         //Redirect to the listing page,
-        header('location: clientes.php');
+        header('location: citas.php');
         //Important! Don't execute the rest put the exit/die. 
         exit();
     }
@@ -38,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 //If edit variable is set, we are performing the update operation.
 if($edit)
 {
-    $db->where('cliente_id', $cliente_id);
+    $db->where('cita_id', $cita_id);
     //Get data to pre-populate the form.
-    $customer = $db->getOne("cliente");
+    $cita = $db->getOne("cita");
 }
 ?>
 
@@ -50,7 +50,7 @@ if($edit)
 ?>
 <div id="page-wrapper">
     <div class="row">
-        <h2 class="page-header">Actualizar Cliente</h2>
+        <h2 class="page-header">Actualizar Cita</h2>
     </div>
     <!-- Flash messages -->
     <?php
@@ -61,7 +61,7 @@ if($edit)
         
         <?php
             //Include the common form for add and edit  
-            require_once('./forms/cliente_form.php'); 
+            require_once('./forms/cita_form.php'); 
         ?>
     </form>
 </div>

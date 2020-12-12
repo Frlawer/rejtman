@@ -54,13 +54,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 		} else {
 		
-			$_SESSION['login_failure'] = "Invalid user name or password";
+			$_SESSION['login_failure'] = "Contraseña o usuario incorrecto";
 			header('Location:login.php');
 		}
 
 		exit;
 	} else {
-		$_SESSION['login_failure'] = "Invalid user name or password";
+		$_SESSION['login_failure'] = "Contraseña o usuario incorrecto";
 		header('Location:login.php');
 		exit;
 	}

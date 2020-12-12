@@ -32,6 +32,11 @@ function getDbInstance() {
     return new MysqliDb(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 }
 
+/**
+ * Configurar zona horarioa
+ */
+date_default_timezone_set('America/Argentina/Mendoza');
+
 /*
   |--------------------------------------------------------------------------
   | TOKEN MP APP ID 225380343 

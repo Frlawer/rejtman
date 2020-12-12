@@ -40,7 +40,8 @@ class Cliente extends DBconn {
 			cliente_dni,
 			cliente_tel,
 			cliente_dir,
-			cliente_desc
+			cliente_desc,
+			create_at
 			) VALUES(
 			'".$this->cliente_nombre."',
 			'".$this->cliente_apellido."',
@@ -48,7 +49,8 @@ class Cliente extends DBconn {
 			'".$this->cliente_dni."',
 			'".$this->cliente_tel."',
 			'".$this->cliente_dir."',
-			'".$this->cliente_desc."'
+			'".$this->cliente_desc."',
+			date('Y-m-d H:i:s')
 			)";
 		$this->execute_single_query();
     }

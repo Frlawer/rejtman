@@ -5,7 +5,6 @@ use PHPMailer\PHPMailer\Exception;
 
 // Código para procesar el formulario
 if (array_key_exists('email', $_SESSION)) {
-    date_default_timezone_set('Etc/UTC');
 
     // require './vendor/autoload.php';
     require 'mail/Exception.php';
@@ -53,6 +52,7 @@ if (array_key_exists('email', $_SESSION)) {
         "cliente_dir" => $dir,
         "cliente_desc" => $desc
     );
+    $data['create_at'] = date('Y-m-d H:i:s');
     $id = $cliente->insert ('cliente', $data);
 
     // Cargo cliente BD
@@ -61,6 +61,7 @@ if (array_key_exists('email', $_SESSION)) {
     
     // Cargo la Cita a BD
     $cita = getDbInstance();
+    
     $datacita = Array (
         "area_id" => $area,
         "abogada_id" => $abogada,
@@ -71,6 +72,8 @@ if (array_key_exists('email', $_SESSION)) {
         "horario_id" => $horario,
         "cita_desc" => $desc,
     );
+    $datacita['create_at'] = date('Y-m-d H:i:s');
+
     $up = $cita->insert('cita', $datacita);
     // $cita2 = new Cita(null, $area, $abogada, $nombre, $email, $tel, $fecha_db, $horario, $desc);
     // $cita2->insert();
@@ -110,7 +113,6 @@ if (array_key_exists('email', $_SESSION)) {
         $mail->addAddress('contacto@estudiomartinezrejtman-asoc.com.ar');
     }
     // $mail->addAddress($datos_abogada['abogada_email'] , NOMBRE_ESTUDIO);
-    $mail->addAddress('frlawer@gmail.com', NOMBRE_ESTUDIO);
     $mail->Subject = 'Nueva cita programada.';
     $mail->isHTML(true);
     $mail->Body = '<p>El cliente '.$nombre.' '.$apellido.' solicitó una cita con '.$datos_abogada['abogada_nombre'].'</p><p>En la fecha '.$_SESSION['fecha'].'</p><p>La hora '.$datos_hora['horario_hora'].'</p><p>El area a tratar es '.$datos_area['area_nombre'].'</p><p>Datos del cliente: Email: '.$email.', Telefono: '.$tel.', Descripción: '.$desc.'</p>';
@@ -128,11 +130,7 @@ if (array_key_exists('email', $_SESSION)) {
     $mail2->addAddress($email);
     $mail2->isHTML(true);
     $mail2->Subject = 'Solicitaste una cita con '.NOMBRE_ESTUDIO;
-    $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1><h2>¡Gracias por solicitar una cita con nuestro Staff!</h2><p>Los pasos a seguir son los siguientes:</p><p>Si recibiste este email significa que la consulta fue abonada correctamente, y la cita fue programada en el día solicitado. En cualquier situación que no sea posible realizar la misma nos pondremos en contactto con uds para informar cualquier cambio realizado.</p>';
-    foreach ($datos_cuenta as $key => $value) {
-        $mail2->Body .= '<h3>'.$value['cuenta_nombre'].'</h3>';
-        $mail2->Body .= '<p>'.$value['cuenta_datos'].'</p>';
-    }
+    $mail2->Body = '<h1 style="text-align:center">Cita con '.NOMBRE_ESTUDIO.'</h1><h2>¡Gracias por solicitar una cita con nuestro Staff!</h2><p>Los pasos a seguir son los siguientes:</p><p>Si recibiste este email significa que la consulta fue abonada correctamente, y la cita fue programada en el día solicitado. En cualquier situación que no sea posible realizar la misma nos pondremos en contacto con ud. para informar cualquier cambio realizado.</p>';
     $mail2->Body .= '</p><p>Si usted no solicitó una cita envienos un email a <a href="mailto:contacto@estudiomartinezrejtman-asoc.com.ar">contacto@estudiomartinezrejtman-asoc.com.ar</a>.</p><p>© 2020 '.NOMBRE_ESTUDIO.' Todos los derechos reservados</p>';
     
     if(!$mail2->send()){
@@ -152,7 +150,7 @@ if (array_key_exists('email', $_SESSION)) {
                         <h2>Recibimos tu pago, tu cita fue agendada correctamente.</h2>
                         <h6>Debes revisar tu Email para conocer el procedimiento.</h6>
                         <p>A veces la tarjeta es rechazada o el metodo de pago no fue aprovado por MP, otro problema frecuente es que tengas activado un bloqueador de publicidad en tu navegador que no permite finalizar el pago, desactivalo y recarga la página nuevamente.</p>
-                        <a href="/cita" class="button">Solicitar nuevamente una cita.</a>
+                        <a href="/" class="button">Volver a inicio.</a>
                     </div>
                 </div>
                 <div class="col-12-mobile col-6">

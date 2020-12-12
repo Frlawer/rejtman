@@ -10,6 +10,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" type="image/x-icon" href="images/favicon.png">
 		<script src="https://kit.fontawesome.com/b9e6d43654.js" crossorigin="anonymous"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-469TKEP2EC"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-469TKEP2EC');</script>
@@ -27,13 +28,14 @@
 										<div class="col-5 col-12-mobile">
 											<ul>
 												<li>
-													<i class="fa fa-map-marker" aria-hidden="true"></i>Coronel Hilarión Plaza 374, San Rafael, Mendoza</div>
+													<a href="https://goo.gl/maps/yQkFi5GtZpdLAxMa8" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i>Coronel Hilarión Plaza 374, San Rafael, Mendoza</a>
 												</li>
 											</ul>
+										</div>
 										<div class="col-5 col-12-mobile">
 											<ul class="headercontact">
 												<li>
-													<i class="fa fa-phone"></i> 0260-4421819
+													<a href="tel:+5402604421819"><i class="fa fa-phone"></i> 0260-4421819</a>
 												</li>
 												<li>
 													<i class="fa fa-clock-o"></i> 9AM - 17PM</li>

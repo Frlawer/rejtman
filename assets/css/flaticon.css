@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 02/12/2020 15:18
+  	Creation date: 15/12/2020 15:07
   	*/
 
     @font-face {
@@ -52,3 +52,6 @@
     .flaticon-tribunal:before { content: "\f113"; }
     .flaticon-tribunal-1:before { content: "\f114"; }
     .flaticon-contrato-1:before { content: "\f115"; }
+    .flaticon-desalojo:before { content: "\f116"; }
+    .flaticon-propiedad:before { content: "\f117"; }
+    .flaticon-patrimonio:before { content: "\f118"; }

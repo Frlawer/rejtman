@@ -143,6 +143,17 @@
 							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
+										<i class="fi flaticon-desalojo"></i>
+									</div>
+									<div class="servicecontent">
+										<h3>Desalojos</h3>
+										<p>Titulos supletorios. Escrituración. Reivindicación (Recupero de tierras). Ejecución de documentos.</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-12-mobile">
+								<div class="servicewrap">
+									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-tribunal-1"></i>
 									</div>
 									<div class="servicecontent">

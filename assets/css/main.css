@@ -93,6 +93,15 @@ Creation date: 23/10/2020 22:28
 .flaticon-contrato-1:before {
   content: "\f115"; }
 
+.flaticon-desalojo:before {
+  content: "\f116"; }
+
+.flaticon-propiedad:before {
+  content: "\f117"; }
+
+.flaticon-patrimonio:before {
+  content: "\f118"; }
+
 #top {
   background-color: #931a25;
   font-family: "Source Sans Pro";

@@ -114,7 +114,7 @@
 									</div>
 									<div class="servicecontent">
 										<h3>Recupero de Daños y Perjuicios</h3>
-										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Mediaciones. Redacción y revisión de contratos. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
+										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
 									</div>
 								</div>
 							</div>
@@ -137,17 +137,6 @@
 									<div class="servicecontent">
 										<h3>Reparación histórica.</h3>
 										<p>Jubilaciones y Pensiones. Retiro por invalidez</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-6 col-12-mobile">
-								<div class="servicewrap">
-									<div class="serviceicon col-12-mobile">
-										<i class="fi flaticon-contrato-1"></i>
-									</div>
-									<div class="servicecontent">
-										<h3>Comercial - Empresarial</h3>
-										<p>Asesoramiento integral a Empresas, Relaciones laborales, Planificación societaria y tributaria. Contratos Asociativos, Sociedades Comercialesgit .</p>
 									</div>
 								</div>
 							</div>

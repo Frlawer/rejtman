@@ -56,9 +56,9 @@
 										<li><a href="/" class="scrolly">Inicio</a></li>
 										<li><a href="./cita" class="scrolly">Asesoramiento</a></li>
 										<li><a href="./nosotros" class="scrolly">Nosotros</a></li>
-										<li><a href="/#areas" class="scrolly">Áreas</a></li>
-										<li><a href="/#banner" class="scrolly">Equipo</a></li>
-										<li><a href="/#footer" class="scrolly">Contacto</a></li>
+										<li><a href="#areas" class="scrolly">Áreas</a></li>
+										<li><a href="#staff" class="scrolly">Equipo</a></li>
+										<li><a href="#footer" class="scrolly">Contacto</a></li>
 									</ul>
 								</nav>
 							</div>

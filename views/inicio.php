@@ -95,6 +95,19 @@
 									<h2>Como podemos ayudarte</h2>
 								</div>
 							</div>
+							
+							<div class="col-6 col-12-mobile">
+								<div class="servicewrap">
+									<div class="serviceicon col-12-mobile">
+										<i class="fi flaticon-herido"></i>
+									</div>
+									<div class="servicecontent">
+										<h3>Derecho Civíl y Comercial</h3>
+										<p>Accidentes de Tránsito (indemnizaciones). Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Sucesiones. Desalojos. Títulos Supletorios (escrituración). Reivindicación (recupero de tierras). Ejecución de documentos. Contratos de Obra. Contratos de Servicios. Fideicomiso.</p>
+									</div>
+								</div>
+							</div>
+
 							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
@@ -106,18 +119,7 @@
 									</div>
 								</div>
 							</div>
-							
-							<div class="col-6 col-12-mobile">
-								<div class="servicewrap">
-									<div class="serviceicon col-12-mobile">
-										<i class="fi flaticon-herido"></i>
-									</div>
-									<div class="servicecontent">
-										<h3>Recupero de Daños y Perjuicios</h3>
-										<p>Indemnizaciones. Reclamos a Aseguradoras. Acciones Judiciales y Extrajudiciales. Si usted fue víctima de un accidente de tránsito y no sabe cómo iniciar su reclamo, contáctenos</p>
-									</div>
-								</div>
-							</div>
+
 							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
@@ -125,18 +127,19 @@
 									</div>
 									<div class="servicecontent">
 										<h3>Derecho Laboral</h3>
-										<p>Representación en causas por despidos. Accidentes de Trabajo. Diferencias Salariales. Trabajo en Negro</p>
+										<p>Despidos. Accidentes de Trabajo. Trabajo en Negro. Diferencias Salariales.</p>
 									</div>
 								</div>
 							</div>
+
 							<div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-pareja"></i>
 									</div>
 									<div class="servicecontent">
-										<h3>Reparación histórica.</h3>
-										<p>Jubilaciones y Pensiones. Retiro por invalidez</p>
+										<h3>Derecho Previsional</h3>
+										<p>Jubilaciones y Pensiones. Retiro por invalidez.</p>
 									</div>
 								</div>
 							</div>

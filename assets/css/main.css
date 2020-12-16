@@ -1751,7 +1751,7 @@ body.homepage.is-preload #header:after {
       margin: 0 0 3em 0; }
   #footer .copyright {
     text-align: center;
-    color: rgba(128, 128, 128, 0.75);
+    color: rgba(204, 204, 204, 0.75);
     font-size: 0.8em;
     cursor: default; }
     #footer .copyright a {

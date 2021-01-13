@@ -143,7 +143,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-6 col-12-mobile">
+							<!-- <div class="col-6 col-12-mobile">
 								<div class="servicewrap">
 									<div class="serviceicon col-12-mobile">
 										<i class="fi flaticon-desalojo"></i>
@@ -164,7 +164,7 @@
 										<p>Asesoramiento integral para las diferentes figuras contractuales amparadas por el Derecho Civil y Comercial. Fideicomiso Inmobiliario.</p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>

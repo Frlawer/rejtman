@@ -47,7 +47,7 @@
 									<li>DERECHO CIVIL Y COMERCIAL</li>
 									<li>DERECHO DE FAMILIA</li>
 									<li>DERECHO LABORAL</li>
-									<li>DERECHO PREVICIONAL</li>
+									<li>DERECHO PREVISIONAL</li>
 								</ul>
 							</section>							
 						
